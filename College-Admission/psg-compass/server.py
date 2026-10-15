@@ -45,7 +45,7 @@ DEMO_PW = "student123"
 # the saved details are used straight away (no second registration).
 
 PROFILE_KEYS = ["name", "phone", "marks10", "marks12", "town",
-                "stay", "hostelType", "travel"]
+                "stay", "hostelType", "travel", "stream", "want", "degree"]
 MAX_LEN = 120
 
 

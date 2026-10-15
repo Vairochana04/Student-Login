@@ -211,6 +211,12 @@ input,select{font:inherit;color:inherit}
 .cutline b{font-size:17px;color:var(--navy)}
 .formact{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px}
 .formact .btn{height:42px}
+/* profile chips — stream / course wanted / degree (wrap like the app) */
+.pchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.pchip{border:1px solid var(--line);background:#fff;color:#33415f;font-family:inherit;font-size:12.6px;
+  font-weight:650;padding:8px 14px;border-radius:999px;cursor:pointer;line-height:1.25}
+.pchip:hover{border-color:#c6d0e2;color:var(--navy)}
+.pchip.on{background:var(--navy);border-color:var(--navy);color:#fff}
 .btn--sm{height:34px;padding:0 12px;font-size:12.4px;gap:6px}
 @media (max-width:640px){.form .frow,.form .frow--3{grid-template-columns:1fr}}
 .segrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
@@ -940,6 +946,22 @@ function nearMe(c) {
   return hay.indexOf(first) >= 0;
 }
 
+/* --------------------------------------------------- academic profile ----- */
+var STREAMS = ['Science – Maths', 'Science – Biology', 'Commerce', 'Arts & others'];
+var WANT = ['Engineering', 'Arts & Science', 'Medical & health', 'Pharmacy', 'Management', 'Not sure yet'];
+var NOT_SURE = 'Not sure yet';
+var ANY_DEGREE = 'Any degree in this course';
+var DEGREES = {
+  'Engineering': ['B.E. Computer Science', 'B.E. Electronics & Communication', 'B.E. Electrical & Electronics',
+    'B.E. Mechanical', 'B.E. Civil', 'B.Tech Biotechnology / Textile', 'B.Tech Information Technology', 'Diploma (after Class 10)', ANY_DEGREE],
+  'Arts & Science': ['B.Sc. Computer Science', 'B.Sc. Microbiology', 'B.Com. (Accounting & Finance)',
+    'B.Com (Computer Applications)', ANY_DEGREE],
+  'Medical & health': ['MBBS', 'B.Sc. Nursing', 'BPT (Physiotherapy)', 'M.Sc. Nursing', ANY_DEGREE],
+  'Pharmacy': ['B.Pharm', 'M.Pharm (Pharmacology)', 'Pharm.D', ANY_DEGREE],
+  'Management': ['BBA', 'MBA', 'B.Com. (Accounting & Finance)', ANY_DEGREE]
+};
+function degreesFor(w) { return DEGREES[w] || [ANY_DEGREE]; }
+
 /* ------------------------------------------------------------ details form --- */
 function field(id, label, type, val, err, ph) {
   return '<div class="f2"><label for="f_' + id + '">' + label + '</label>' +
@@ -972,7 +994,24 @@ function viewDetails() {
         field('marks10', 'Class 10 marks (%)', 'number', d.marks10, e.marks10, 'e.g. 94.9') +
         field('marks12', 'Class 12 marks (%)', 'number', d.marks12, e.marks12, 'e.g. 95') +
       '</div>' +
-      '<div class="frow">' +
+      '<h4 style="margin-top:6px">Stream <span class="mut" style="font-weight:600">· which stream did you study?</span></h4>' +
+      '<div class="pchips">' + STREAMS.map(function (o) {
+        return '<button type="button" class="pchip' + (d.stream === o ? ' on' : '') + '" data-stream="' + esc(o) + '">' + esc(o) + '</button>';
+      }).join('') + '</div>' +
+      (e.stream ? '<small class="ferr">' + esc(e.stream) + '</small>' : '') +
+      '<h4 style="margin-top:14px">Course wanted</h4>' +
+      '<div class="pchips">' + WANT.map(function (o) {
+        return '<button type="button" class="pchip' + (d.want === o ? ' on' : '') + '" data-want="' + esc(o) + '">' + esc(o) + '</button>';
+      }).join('') + '</div>' +
+      (e.want ? '<small class="ferr">' + esc(e.want) + '</small>' : '') +
+      (d.want && d.want !== NOT_SURE
+        ? '<h4 style="margin-top:14px">Degree</h4>' +
+          '<div class="pchips">' + degreesFor(d.want).map(function (o) {
+            return '<button type="button" class="pchip' + (d.degree === o ? ' on' : '') + '" data-degree="' + esc(o) + '">' + esc(o) + '</button>';
+          }).join('') + '</div>' +
+          (e.degree ? '<small class="ferr">' + esc(e.degree) + '</small>' : '')
+        : '') +
+      '<div class="frow" style="margin-top:14px">' +
         field('town', 'Location (town / city)', 'text', d.town, e.town, 'e.g. Coimbatore') +
       '</div>' +
       '<h4 style="margin-top:6px">Staying <span class="mut" style="font-weight:600">\u00b7 day scholar illa hostel?</span></h4>' +
@@ -982,7 +1021,7 @@ function viewDetails() {
         ? '<h4 style="margin-top:14px">Hostel</h4>' + segButtons('hostel', ['Boys hostel', 'Girls hostel'], d.hostelType) +
           (e.hostelType ? '<small class="ferr">' + esc(e.hostelType) + '</small>' : '')
         : d.stay === 'Day scholar'
-          ? '<h4 style="margin-top:14px">Travel</h4>' + segButtons('travel', ['College bus', 'Own vehicle', 'Not needed'], d.travel) +
+          ? '<h4 style="margin-top:14px">Travel</h4>' + segButtons('travel', ['College bus', 'City / route bus', 'Own vehicle', 'Not needed'], d.travel) +
             (e.travel ? '<small class="ferr">' + esc(e.travel) + '</small>' : '')
           : '') +
       '<div class="formact">' +
@@ -998,6 +1037,8 @@ function collectForm() {
   var d = S.draft || {};
   return {
     name: v('name'), phone: v('phone'), marks10: v('marks10'), marks12: v('marks12'), town: v('town'),
+    stream: d.stream || '', want: d.want || '',
+    degree: (d.want && d.want !== NOT_SURE) ? (d.degree || '') : '',
     stay: d.stay || '',
     hostelType: d.stay === 'Hostel' ? (d.hostelType || '') : '',
     travel: d.stay === 'Day scholar' ? (d.travel || '') : ''
@@ -1012,6 +1053,9 @@ function validateProfile(x) {
     if (String(x[k] || '') === '' || isNaN(n) || n < 0 || n > 100) e[k] = '0 \u2013 100 madhiri podunga';
   });
   if (String(x.town || '').length < 2) e.town = 'Town / city podunga';
+  if (!x.stream) e.stream = 'Stream select pannunga';
+  if (!x.want) e.want = 'Course wanted select pannunga';
+  if (x.want && x.want !== NOT_SURE && !x.degree) e.degree = 'Degree select pannunga';
   if (!x.stay) e.stay = 'Day scholar illa Hostel select pannunga';
   if (x.stay === 'Hostel' && !x.hostelType) e.hostelType = 'Boys / Girls hostel select pannunga';
   if (x.stay === 'Day scholar' && !x.travel) e.travel = 'College bus / Own vehicle / Not needed';
@@ -1833,7 +1877,7 @@ document.addEventListener('submit', function (e) {
 });
 document.addEventListener('click', function (e) {
   var t = e.target;
-  var el = t.closest ? t.closest('[data-open],[data-save],[data-tab],[data-ask],[data-lvl],[data-stay],[data-hostel],[data-travel],[data-grp]') : null;
+  var el = t.closest ? t.closest('[data-open],[data-save],[data-tab],[data-ask],[data-lvl],[data-stay],[data-hostel],[data-travel],[data-stream],[data-want],[data-degree],[data-grp]') : null;
 
   if (t.id === 'demoFill') {
     document.getElementById('em').value = DEMO.email;
@@ -1852,11 +1896,14 @@ document.addEventListener('click', function (e) {
   if (t.id === 'editProfile') { S.draft = Object.assign({}, S.profile || {}); S.formErr = null; S.view = 'details'; S.id = null; render(); return; }
   if (t.id === 'saveProfile') { saveProfileNow(); return; }
   if (t.id === 'skipProfile') { S.view = 'list'; render(); toast('Later \u2014 details save pannala'); return; }
-  if (el && (el.hasAttribute('data-stay') || el.hasAttribute('data-hostel') || el.hasAttribute('data-travel'))) {
+  if (el && (el.hasAttribute('data-stay') || el.hasAttribute('data-hostel') || el.hasAttribute('data-travel') || el.hasAttribute('data-stream') || el.hasAttribute('data-want') || el.hasAttribute('data-degree'))) {
     var keep = collectForm();
     if (el.hasAttribute('data-stay')) { keep.stay = el.getAttribute('data-stay'); keep.hostelType = ''; keep.travel = ''; }
     if (el.hasAttribute('data-hostel')) keep.hostelType = el.getAttribute('data-hostel');
     if (el.hasAttribute('data-travel')) keep.travel = el.getAttribute('data-travel');
+    if (el.hasAttribute('data-stream')) keep.stream = el.getAttribute('data-stream');
+    if (el.hasAttribute('data-want')) { keep.want = el.getAttribute('data-want'); keep.degree = keep.want === NOT_SURE ? '' : ANY_DEGREE; }
+    if (el.hasAttribute('data-degree')) keep.degree = el.getAttribute('data-degree');
     S.draft = keep;
     S.formErr = null;
     render();

@@ -67,7 +67,7 @@ public class Server {
        and the saved details are used straight away (no second registration). */
 
     static final String[] PROFILE_KEYS = {"name", "phone", "marks10", "marks12",
-            "town", "stay", "hostelType", "travel"};
+            "town", "stay", "hostelType", "travel", "stream", "want", "degree"};
     static final int MAX_LEN = 120;
 
     static final Object WRITE_LOCK = new Object();
