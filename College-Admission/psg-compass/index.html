@@ -325,10 +325,11 @@ input,select{font:inherit;color:inherit}
   .kv{grid-template-columns:1fr}
 }
 
-/* Overview must fit its container, including Windows split-screen/zoomed views.
+/* Overview always stacks Quick facts above Recruiters on every screen.
+   It must also fit its container, including Windows split-screen/zoomed views.
    Explicit zero-minimum tracks prevent the animated logo strip from imposing
    its max-content width on either the cards or the facts columns. */
-.overview-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.overview-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1fr)}
 .overview-grid > .card{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin:0}
 .overview-grid .kv{width:100%;min-width:0;grid-template-columns:repeat(2,minmax(0,1fr))}
 .overview-grid .kv > div{min-width:0;max-width:100%;box-sizing:border-box}
