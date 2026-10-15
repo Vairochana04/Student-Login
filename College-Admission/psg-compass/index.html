@@ -342,6 +342,10 @@ input,select{font:inherit;color:inherit}
   .overview-grid .kv{grid-template-columns:minmax(0,1fr)}
 }
 
+/* Keep placement recruiters below the year-by-year results on all screens. */
+.placements-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1fr)}
+.placements-grid > .card{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin:0}
+.placements-grid .mq{contain:inline-size;width:100%;max-width:100%;overflow:hidden;box-sizing:border-box}
 </style>
 </head>
 <body>
@@ -1507,7 +1511,7 @@ function recruiterStrip(c) {
 function tabPlacements(c) {
   var any = c.place.some(function (p) { return p.pct != null; });
   return '' +
-  '<div class="grid2">' +
+  '<div class="grid2 placements-grid">' +
     '<section class="card">' +
       '<h4>Year by year</h4>' +
       (any
