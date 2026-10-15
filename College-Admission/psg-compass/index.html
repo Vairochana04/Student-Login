@@ -1386,13 +1386,12 @@ function tabOverview(c) {
 
 function tabCourses(c) {
   var counts = levelsOf(c);
-  var sel = (S.lvl === 'UG' || S.lvl === 'PG') && counts[S.lvl] ? S.lvl : 'ALL';
+  var sel = (S.lvl === 'UG' || S.lvl === 'PG') ? S.lvl : 'ALL';
   var rows = c.courses.filter(function (x) { return sel === 'ALL' || lvlOf(x) === sel; });
   var tnea = rows.some(function (x) { return x.cut[0] != null; });
   var seg = ['ALL', 'UG', 'PG'].map(function (k) {
     var lbl = k === 'ALL' ? 'All courses' : k;
-    var off = counts[k] ? '' : ' disabled';
-    return '<button class="seg__b' + (sel === k ? ' on' : '') + '" data-lvl="' + k + '"' + off + '>' +
+    return '<button type="button" class="seg__b' + (sel === k ? ' on' : '') + '" data-lvl="' + k + '" aria-pressed="' + (sel === k) + '">' +
       lbl + ' <span class="seg__n">' + counts[k] + '</span></button>';
   }).join('');
   return '' +
@@ -1416,6 +1415,7 @@ function tabCourses(c) {
           : '<td class="mut">' + esc(x.mark || '—') + '</td>') +
       '</tr>';
     }).join('') +
+    (rows.length ? '' : '<tr><td colspan="3" class="mut">No ' + sel + ' programmes are listed for this campus in this demo. Check the official college website for the current programme list.</td></tr>') +
     '</tbody></table>' +
     '<p class="mut" style="margin-top:10px;font-size:12.2px">' +
       (rows.length
