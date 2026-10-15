@@ -1,0 +1,92 @@
+/* =============================================================================
+   CampusConnect — styles for the profile form's subject-marks row
+   -----------------------------------------------------------------------------
+   Imported by ProfileForm.jsx, so the new fields look right without touching
+   the app's main stylesheet. Every colour uses a var() with a fallback, so
+   the row also fits a theme that does not define these variables.
+   ========================================================================== */
+
+/* the row: a label, the three boxes and the live cutoff readout */
+.pf__row--subs {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.pf__subs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pf__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 132px;
+}
+
+.pf__sub > span {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--mut, #41598a);
+  letter-spacing: .04em;
+}
+
+.pf__sub input {
+  width: 100%;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  padding: 11px 10px;
+  border: 1px solid var(--line, #e3e9f3);
+  border-radius: 10px;
+  background: var(--card, #fff);
+  color: var(--ink, #0f1a2e);
+  outline: none;
+}
+
+.pf__sub input:focus {
+  border-color: var(--gold, #e3a93f);
+  box-shadow: 0 0 0 3px rgba(227, 169, 63, .16);
+}
+
+.pf__sub .pf__err {
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--bad, #a33b32);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* the live TNEA cutoff: Maths + Physics/2 + Chemistry/2 */
+.pf__cut {
+  margin-left: auto;
+  text-align: center;
+  min-width: 104px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--warnbg, #fdf3e3);
+  border: 1px solid rgba(227, 169, 63, .38);
+}
+
+.pf__cut b {
+  display: block;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--warn, #8a5a10);
+  font-variant-numeric: tabular-nums;
+}
+
+.pf__cut span {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--warn, #8a5a10);
+}
+
+@media (max-width: 560px) {
+  .pf__sub { width: calc(33.33% - 10px); min-width: 92px; }
+  .pf__cut { margin-left: 0; }
+}
