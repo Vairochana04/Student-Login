@@ -324,6 +324,23 @@ input,select{font:inherit;color:inherit}
   .pc{grid-template-columns:1fr}
   .kv{grid-template-columns:1fr}
 }
+
+/* Overview must fit its container, including Windows split-screen/zoomed views.
+   Explicit zero-minimum tracks prevent the animated logo strip from imposing
+   its max-content width on either the cards or the facts columns. */
+.overview-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.overview-grid > .card{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin:0}
+.overview-grid .kv{width:100%;min-width:0;grid-template-columns:repeat(2,minmax(0,1fr))}
+.overview-grid .kv > div{min-width:0;max-width:100%;box-sizing:border-box}
+.overview-grid .kv span,.overview-grid .kv b{white-space:normal;overflow-wrap:anywhere}
+.overview-grid .mq{contain:inline-size;max-width:100%;width:100%;overflow:hidden}
+@media (max-width:960px){
+  .overview-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .overview-grid .kv{grid-template-columns:minmax(0,1fr)}
+}
+
 </style>
 </head>
 <body>
@@ -1340,7 +1357,7 @@ function viewDetail(c) {
 
 function tabOverview(c) {
   return '' +
-  '<div class="grid2">' +
+  '<div class="grid2 overview-grid">' +
     '<section class="card">' +
       '<h4>Quick facts</h4>' +
       '<div class="kv">' +
