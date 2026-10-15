@@ -346,6 +346,10 @@ input,select{font:inherit;color:inherit}
 .placements-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1fr)}
 .placements-grid > .card{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin:0}
 .placements-grid .mq{contain:inline-size;width:100%;max-width:100%;overflow:hidden;box-sizing:border-box}
+/* Student comments follow the rating summary, including on desktop. */
+.reviews-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1fr)}
+.reviews-grid > .card{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin:0}
+.reviews-grid .rev{min-width:0;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -1821,7 +1825,7 @@ function tabLocation(c) {
 function tabReviews(c) {
   var cats = Object.keys(c.cats);
   return '' +
-  '<div class="grid2">' +
+  '<div class="grid2 reviews-grid">' +
     '<section class="card">' +
       '<div class="rate"><b class="rate__big">' + c.rating.toFixed(1) + '</b>' +
         '<span><b>out of 5</b><br><span class="mut" style="font-size:12.2px">' + c.reviews.length + ' sample reviews</span></span></div>' +
