@@ -350,6 +350,40 @@ input,select{font:inherit;color:inherit}
 .reviews-grid{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1fr)}
 .reviews-grid > .card{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin:0}
 .reviews-grid .rev{min-width:0;overflow-wrap:anywhere}
+
+/* Compact, responsive fee comparison. Unknown fees never become zero totals. */
+.fee-panel{min-width:0}
+.fee-warning{padding:12px;border:1px solid #ebd299;background:#fff8e8;border-radius:10px;margin:12px 0;color:#70501b;font-size:12.5px}
+.fee-options{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 8px}
+.fee-note{font-size:12px;margin-bottom:16px}
+.fee-heading,.fee-course-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) 82px;gap:12px;align-items:center}
+.fee-heading{font-size:11px;color:var(--mut);padding:10px 14px}
+.fee-list{display:grid;gap:10px}
+.fee-course{border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.fee-course-row{padding:14px}
+.fee-name{font-size:13px;overflow-wrap:anywhere}
+.fee-quota{padding:10px;border-radius:9px;min-width:0;overflow-wrap:anywhere}
+.fee-gov{background:#edf3fc;color:#26417a}
+.fee-mgmt{background:#fff5de;color:#79520e}
+.fee-quota span,.fee-quota small{display:block;font-size:11px}
+.fee-quota b{font-size:14px}
+.fee-toggle{font-size:12px;font-weight:700;padding:8px 0;color:var(--navy)}
+.fee-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.fee-detail{padding:14px;border-top:1px solid var(--line);background:#fbfcfe;font-size:12px}
+.fee-break-row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.fee-break-row b{text-align:right}
+.fee-break-head{color:var(--mut);font-size:11px}
+.fee-detail p{margin-top:12px}
+.fee-scholar{margin-top:14px}.fee-scholar summary{cursor:pointer;font-weight:700}
+.fee-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:640px){
+ .fee-heading{display:none}
+ .fee-course-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .fee-name,.fee-toggle{grid-column:1/-1}
+ .fee-toggle{text-align:left}
+ .fee-break-row{font-size:11px;gap:6px}
+}
+
 </style>
 </head>
 <body>
@@ -1324,7 +1358,7 @@ function rowHTML(c) {
 
 function viewDetail(c) {
   var savedOn = S.saved.indexOf(c.id) >= 0;
-  var tabs = [['overview','Overview'],['courses','Courses & cutoff'],['placements','Placements'],['location','Location'],['reviews','Reviews'],['qa','Q & A']];
+  var tabs = [['overview','Overview'],['courses','Courses & cutoff'],['fees','Fee structure'],['placements','Placements'],['location','Location'],['reviews','Reviews'],['qa','Q & A']];
   return '' +
   '<header class="top"><div class="wrap top__in">' +
     '<span class="brand"><span class="brand__mark">PSG</span><span><b>PSG Campus Compass</b><small>PSG + Karpagam institutions · one clean page</small></span></span>' +
@@ -1357,6 +1391,7 @@ function viewDetail(c) {
     }).join('') + '</div>' +
     (S.tab === 'overview' ? tabOverview(c) :
      S.tab === 'courses' ? tabCourses(c) :
+     S.tab === 'fees' ? tabFees(c) :
      S.tab === 'placements' ? tabPlacements(c) :
      S.tab === 'location' ? tabLocation(c) :
      S.tab === 'reviews' ? tabReviews(c) : tabQA(c)) +
@@ -1391,6 +1426,37 @@ function tabOverview(c) {
       '<p class="mut" style="font-size:12.6px">Open the courses tab to see the closing cutoff of the last three years, then check the Q&amp;A tab for hostel and document questions.</p>' +
     '</section>' +
   '</div>';
+}
+
+/* Illustrative planning inputs only: NOT a college fee schedule.
+   Numeric templates apply only to UG B.E./B.Tech demo courses. */
+var FEE_DEMO = { counselling:55000, management:125000, exam:5000, other:10000,
+  hostel:45000, mess:40000, bus:25000, once:10000 };
+function feeMode() {
+  if (S.feeMode) return S.feeMode;
+  var p = S.profile || {};
+  return p.stay === 'Hostel' ? 'hostel' : p.travel === 'College bus' ? 'bus' : 'other';
+}
+function feeKnown(x) { return /^B\.(E\.|Tech)/i.test(x.n); }
+function feeMoney(v) { return '₹' + v.toLocaleString('en-IN'); }
+function feeAnnual(quota, mode) {
+  return FEE_DEMO[quota] + FEE_DEMO.exam + FEE_DEMO.other +
+    (mode === 'hostel' ? FEE_DEMO.hostel + FEE_DEMO.mess : mode === 'bus' ? FEE_DEMO.bus : 0);
+}
+function feeBreakdown(x, mode, index) {
+  if (!feeKnown(x)) return '<div class="fee-detail" id="fee-detail-' + index + '"><p>Fee not available for this programme. Counselling / government-quota and management-quota availability must also be confirmed with the college.</p><p><a href="' + esc(college(S.id).web) + '" target="_blank" rel="noopener noreferrer">Check the official college website ↗</a></p></div>';
+  var rows = [['Tuition / year',FEE_DEMO.counselling,FEE_DEMO.management], ['Exam fees / year',FEE_DEMO.exam,FEE_DEMO.exam], ['Other mandatory fees / year',FEE_DEMO.other,FEE_DEMO.other]];
+  if (mode === 'hostel') rows.push(['Hostel / year',FEE_DEMO.hostel,FEE_DEMO.hostel],['Mess / year',FEE_DEMO.mess,FEE_DEMO.mess]);
+  if (mode === 'bus') rows.push(['College bus / year — route-dependent',FEE_DEMO.bus,FEE_DEMO.bus]);
+  if (mode === 'other') rows.push(['College transport — not selected',0,0]);
+  rows.push(['Annual recurring total',feeAnnual('counselling',mode),feeAnnual('management',mode)],['One-time charges — first year only',FEE_DEMO.once,FEE_DEMO.once],['Estimated first-year total',feeAnnual('counselling',mode)+FEE_DEMO.once,feeAnnual('management',mode)+FEE_DEMO.once]);
+  return '<div class="fee-detail" id="fee-detail-' + index + '"><div class="fee-break"><div class="fee-break-row fee-break-head"><b>Illustrative breakdown</b><b>Counselling</b><b>Management</b></div>' + rows.map(function(r){return '<div class="fee-break-row"><span>' + esc(r[0]) + '</span><b>' + feeMoney(r[1]) + '</b><b>' + feeMoney(r[2]) + '</b></div>';}).join('') + '</div><p class="mut">Private travel, books and personal expenses are not included. Bus and hostel availability, routes, deposits and additional charges require college confirmation.</p><details class="fee-scholar"><summary>Scholarships & concessions</summary><p>Ask the admissions office about first-graduate concessions, eligible community/income-based government scholarships and institutional merit aid. Eligibility, quota coverage and award amounts vary. No scholarship is assumed or deducted from these totals; get written approval before budgeting.</p></details></div>';
+}
+function tabFees(c) {
+  var mode = feeMode();
+  return '<section class="card fee-panel"><h3>Fee structure · All departments</h3><p class="fee-warning"><b>Illustrative demo estimates — not official fees.</b> These generic UG engineering planning amounts are the same across campuses and departments; actual fees can differ. No academic-year fee schedule has been verified. Confirm quota availability and the complete fee schedule with the college.</p>' +
+    '<div class="fee-options" role="group" aria-label="Stay and travel for fee estimate">' + [['hostel','Hostel + mess'],['bus','Day scholar · College bus'],['other','Day scholar · Other travel']].map(function(o){return '<button type="button" class="pchip' + (mode === o[0] ? ' on' : '') + '" data-fee-mode="' + o[0] + '" aria-pressed="' + (mode === o[0]) + '">' + o[1] + '</button>';}).join('') + '</div><p class="mut fee-note">Starts from your profile preference. Changing this estimate does not change your saved profile. All amounts are in INR per year unless marked one-time.</p>' +
+    '<div class="fee-heading"><b>Department</b><b>Counselling quota</b><b>Management quota</b><span></span></div><div class="fee-list">' + c.courses.map(function(x,i){var known=feeKnown(x), key=c.id+':'+i, open=S.feeOpen===key;return '<article class="fee-course"><div class="fee-course-row"><b class="fee-name">' + esc(x.n) + '</b><div class="fee-quota fee-gov"><span>Counselling</span><b>' + (known ? feeMoney(feeAnnual('counselling',mode)) : 'Confirm with college') + '</b>' + (known ? '<small>approx. / year</small>' : '') + '</div><div class="fee-quota fee-mgmt"><span>Management</span><b>' + (known ? feeMoney(feeAnnual('management',mode)) : 'Confirm with college') + '</b>' + (known ? '<small>approx. / year</small>' : '') + '</div><button type="button" class="fee-toggle" data-fee-open="' + i + '" aria-expanded="' + open + '" aria-controls="fee-detail-' + i + '">' + (open ? 'Close ▴' : 'Details ▾') + '<span class="fee-sr"> for ' + esc(x.n) + '</span></button></div>' + (open ? feeBreakdown(x,mode,i) : '') + '</article>';}).join('') + '</div></section>';
 }
 
 function tabCourses(c) {
@@ -1908,7 +1974,10 @@ document.addEventListener('submit', function (e) {
 });
 document.addEventListener('click', function (e) {
   var t = e.target;
-  var el = t.closest ? t.closest('[data-open],[data-save],[data-tab],[data-ask],[data-lvl],[data-stay],[data-hostel],[data-travel],[data-stream],[data-want],[data-degree],[data-grp]') : null;
+  var el = t.closest ? t.closest('[data-fee-mode],[data-fee-open],[data-open],[data-save],[data-tab],[data-ask],[data-lvl],[data-stay],[data-hostel],[data-travel],[data-stream],[data-want],[data-degree],[data-grp]') : null;
+
+  if (el && el.hasAttribute('data-fee-mode')) { S.feeMode = el.getAttribute('data-fee-mode'); render(); return; }
+  if (el && el.hasAttribute('data-fee-open')) { var fk = S.id + ':' + el.getAttribute('data-fee-open'); S.feeOpen = S.feeOpen === fk ? null : fk; render(); return; }
 
   if (t.id === 'demoFill') {
     document.getElementById('em').value = DEMO.email;
