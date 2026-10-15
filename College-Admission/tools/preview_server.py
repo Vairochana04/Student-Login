@@ -174,7 +174,13 @@ def read_students():
         return {}
 
 
+def ensure_data_dir():
+    """server/data/ is created on first write — the folder is not in the repo."""
+    DATA.mkdir(parents=True, exist_ok=True)
+
+
 def write_students(students):
+    ensure_data_dir()
     tmp = STUDENTS_FILE.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(students, ensure_ascii=False, indent=1), "utf-8")
     os.replace(tmp, STUDENTS_FILE)
@@ -198,6 +204,7 @@ def log_event(email, etype, cid="", label=""):
     if etype not in EVENT_TYPES:
         return
     rec = {"email": email, "type": etype, "cid": cid or "", "label": label or "", "at": now_iso()}
+    ensure_data_dir()
     with EVENTS_FILE.open("a", encoding="utf-8") as fh:
         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
 

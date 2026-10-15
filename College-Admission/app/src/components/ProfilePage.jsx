@@ -17,17 +17,24 @@ const pctOf = (s) => Math.max(35, Math.min(98, Math.round(96 - s * 18)));
 
 const snap = () => ({
   name: cc.user?.name || '', mobile: cc.user?.mobile || '',
+  photo: cc.user?.photo || '',
   marks: cc.marks === null || cc.marks === undefined ? '' : String(cc.marks),
   marks10: cc.marks10 === null || cc.marks10 === undefined ? '' : String(cc.marks10),
+  math: cc.stuMath === null || cc.stuMath === undefined ? '' : String(cc.stuMath),
+  phy: cc.stuPhy === null || cc.stuPhy === undefined ? '' : String(cc.stuPhy),
+  chem: cc.stuChem === null || cc.stuChem === undefined ? '' : String(cc.stuChem),
   stream: cc.stuStream, want: cc.stuWant, degree: cc.stuDegree || ANY_DEGREE,
   stay: cc.stuStay, hostelType: cc.stuHostelType, travel: cc.stuTravel,
   town: cc.stuTown || '', consent: true,
 });
 
+const numOrNull = (v) => (v === '' || v === null || v === undefined ? null : Number(v));
+
 function applyToStore(f) {
   Object.assign(cc, {
-    user: { ...cc.user, name: f.name, mobile: f.mobile, savedServer: true },
-    marks: f.marks, marks10: (f.marks10 === '' || f.marks10 === null || f.marks10 === undefined) ? null : Number(f.marks10),
+    user: { ...cc.user, name: f.name, mobile: f.mobile, photo: f.photo || '', savedServer: true },
+    marks: f.marks, marks10: numOrNull(f.marks10),
+    stuMath: numOrNull(f.math), stuPhy: numOrNull(f.phy), stuChem: numOrNull(f.chem),
     stuStream: f.stream, stuWant: f.want, stuDegree: f.degree,
     stuStay: f.stay, stuHostelType: f.hostelType, stuTravel: f.travel, stuTown: f.town,
   });
@@ -39,7 +46,15 @@ export default function ProfilePage() {
   const [rec, setRec] = useState(null);
   const [editing, setEditing] = useState(false);
   useEffect(() => {
-    api.me().then((d) => { if (d && d.student) setRec(d.student); }).catch(() => {});
+    api.me().then((d) => {
+      if (!d || !d.student) return;
+      setRec(d.student);
+      /* the photo comes back from the server — show it before the form is opened */
+      if (d.student.photo && d.student.photo !== (cc.user || {}).photo) {
+        Object.assign(cc, { user: { ...cc.user, photo: d.student.photo } });
+        set({});
+      }
+    }).catch(() => {});
   }, []);
 
   const u = cc.user || {};
@@ -67,6 +82,7 @@ export default function ProfilePage() {
       ['Name', v(u.name)],
       ['Email id (login)', v(u.email)],
       ['Mobile', u.mobile ? '+91 ' + u.mobile : '—'],
+      ['Profile photo', u.photo ? 'Uploaded ✓' : 'Not added'],
       ['Location', v(cc.stuTown)],
       ['Travel to campus', nearYou(all[0]) ? nearYou(all[0]).label + ' — ' + nearYou(all[0]).note : 'Add your town to see this'],
     ]],
