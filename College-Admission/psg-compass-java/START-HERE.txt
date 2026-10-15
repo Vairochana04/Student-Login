@@ -1,0 +1,29 @@
+PSG CAMPUS COMPASS — 30 second la start
+=======================================
+Backend: JAVA (JDK only) · 16 campuses (PSG 10 + Karpagam 6)
+
+WINDOWS
+-------
+  START-WINDOWS.bat  ->  double-click
+  (Server.java compile aagum + server start aagum + browser open aagum)
+
+  JDK illama-na adhu install link-a kaattum:
+      winget install Microsoft.OpenJDK.21
+  illa  https://adoptium.net  ->  "Install Temurin 21 (JDK)"
+
+MAC / LINUX
+-----------
+  ./START-MAC-LINUX.sh
+  illa terminal la:
+      javac -encoding UTF-8 Server.java
+      java Server
+
+DEMO LOGIN
+----------
+  student@demo.edu  /  student123
+
+  First time  ->  details form (name, phone, 10 & 12 marks, location, hostel)
+  Save panna  ->  colleges varum
+  Next time adhe id + password  ->  colleges DIRECT (thirumba register illa)
+
+JDK mattum venum (JDK 11 illa mela). Maven / Gradle / Python / Node — edhuvum thevai illa.

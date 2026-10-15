@@ -1,0 +1,1920 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<title>PSG Campus Compass — 10 PSG institutions, one clean page</title>
+<meta name="description" content="A compact guide to the 10 PSG institutions in Coimbatore — courses, closing cutoffs for three years, placements, student reviews and campus Q&A on one tidy page." />
+<meta name="theme-color" content="#101d38" />
+<style>
+:root{
+  --navy:#101d38; --navy2:#1a2c52; --gold:#e3a93f; --gold2:#f3cd80;
+  --bg:#f5f7fb; --card:#fff; --ink:#0f1a2e; --mut:#68789a; --line:#e3e9f3;
+  --ok:#1d6b41; --okbg:#e8f6ee; --warn:#8a5a10; --warnbg:#fdf3e3; --bad:#a33b32; --badbg:#fdecea;
+  --r:14px; --shadow:0 1px 2px rgba(15,26,46,.05);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;line-height:1.25;letter-spacing:-.012em}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select{font:inherit;color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+.mut{color:var(--mut)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- shell ---------- */
+.top{position:sticky;top:0;z-index:30;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.top__in{display:flex;align-items:center;gap:12px;height:58px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand__mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,var(--gold2),var(--gold));
+  color:#3a2606;font-weight:800;font-size:13px;display:grid;place-items:center;flex:0 0 auto}
+.brand b{display:block;font-size:14.5px;line-height:1.15}
+.brand small{color:#a9b7d6;font-size:11.5px}
+.spacer{flex:1}
+.iconbtn{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);font-size:15px;position:relative}
+.iconbtn:hover{background:rgba(255,255,255,.18)}
+.dot{position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--gold);border:1.5px solid var(--navy)}
+.userchip{display:flex;align-items:center;gap:8px;padding:5px 10px 5px 5px;border-radius:999px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);font-size:12.5px}
+.userchip i{width:24px;height:24px;border-radius:50%;background:linear-gradient(140deg,var(--gold2),var(--gold));
+  color:#3a2606;font-weight:800;font-size:11px;display:grid;place-items:center;font-style:normal}
+
+/* ---------- login ---------- */
+.login{min-height:calc(100vh - 58px);display:grid;place-items:center;padding:26px 16px 60px}
+.login__card{width:100%;max-width:392px;background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:26px 24px 24px;box-shadow:0 20px 44px -34px rgba(16,29,56,.5)}
+.login__card h1{font-size:21px}
+.login__card .sub{margin-top:7px;color:var(--mut);font-size:13.5px}
+.f{margin-top:16px}
+.f label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.f input{width:100%;border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:#fff}
+.f input:focus{outline:2px solid rgba(227,169,63,.55);border-color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:11px;
+  padding:11px 16px;font-weight:700;font-size:13.5px;border:1px solid transparent}
+.btn--gold{background:linear-gradient(140deg,var(--gold2),var(--gold));color:#3a2606}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn--ghost:hover{border-color:#cfd8e8}
+.btn--block{width:100%;margin-top:16px}
+.demo{margin-top:18px;border:1px dashed var(--line);border-radius:12px;padding:12px 14px;background:#fbfcfe}
+.demo b{font-size:12.5px}
+.demo code{display:block;margin-top:7px;font-size:12.5px;color:var(--ink)}
+.demo code em{font-style:normal;display:block;color:var(--mut);font-size:11.5px;margin-top:2px}
+.demo .btn{margin-top:10px}
+.legal{margin-top:14px;font-size:11.5px;color:var(--mut);line-height:1.5}
+
+/* ---------- list ---------- */
+.head{padding:16px 0 6px}
+.head h2{font-size:19px}
+.head p{margin-top:5px;color:var(--mut);font-size:13px}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0 4px}
+.search{flex:1 1 240px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+  border-radius:11px;padding:9px 12px;color:var(--mut)}
+.search input{border:0;outline:0;background:none;width:100%;color:var(--ink)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);
+  background:#fff;font-size:12.5px;font-weight:650;color:#43506b}
+.chip.on{background:linear-gradient(140deg,var(--gold2),var(--gold));border-color:transparent;color:#3a2606}
+.chip .cnt{font-variant-numeric:tabular-nums;opacity:.75}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0 2px}
+.strip div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 13px}
+.strip b{display:block;font-size:17px;font-variant-numeric:tabular-nums}
+.strip span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.list{display:grid;gap:9px;margin:12px 0 26px}
+.row{display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:12px;align-items:center;background:#fff;
+  border:1px solid var(--line);border-radius:var(--r);padding:11px 13px;cursor:pointer;transition:.14s ease;box-shadow:var(--shadow)}
+.row:hover{border-color:#cdd8ea;transform:translateY(-1px)}
+.row__mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(140deg,#16274a,#0f1c34);color:var(--gold2);
+  display:grid;place-items:center;font-weight:800;font-size:12px;text-align:center;line-height:1.05;padding:2px}
+.row__t b{display:block;font-size:14.6px;line-height:1.3}
+.row__t .meta{display:block;margin-top:3px;font-size:12.1px;color:var(--mut)}
+.row__pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;font-size:11.4px;font-weight:700}
+.pill--rate{background:#fff6e4;color:#8a5c10;border:1px solid #f6e2ba}
+.pill--fee{background:#eef3fd;color:#22345c;border:1px solid #dbe5f7}
+.pill--ok{background:var(--okbg);color:var(--ok);border:1px solid #c9ecd8}
+.pill--warn{background:var(--warnbg);color:var(--warn);border:1px solid #f3dfc6}
+.pill--bad{background:var(--badbg);color:var(--bad);border:1px solid #f6d3cf}
+.pill--up{background:var(--okbg);color:var(--ok)}
+.pill--down{background:var(--badbg);color:var(--bad)}
+.pill--flat{background:#eef1f7;color:#54617a}
+.pill--high{background:#e8f5ec;color:#1d6b3a;border:1px solid #bfe3cc}
+.pill--mid{background:#fdf3e0;color:#8a6a1f;border:1px solid #f0dcae}
+.pill--low{background:#fdecec;color:#9b2c2c;border:1px solid #f3c9c9}
+.pill--near{background:#eaf0fb;color:#26417a;border:1px solid #c7d7f2}
+.row__side{display:grid;gap:6px;justify-items:end;flex:0 0 auto}
+.star{width:32px;height:32px;border-radius:10px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;font-size:14px}
+.star.on{background:#fff6e4;border-color:#f6e2ba}
+
+/* ---------- detail ---------- */
+.back{margin:14px 0 10px;display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--mut);font-weight:650}
+.back:hover{color:var(--ink)}
+.hero{background:linear-gradient(140deg,#16274a 0%,var(--navy) 55%,#0c1730 100%);color:#fff;border-radius:18px;
+  padding:20px 22px;box-shadow:0 22px 46px -34px rgba(16,29,56,.8)}
+.hero__top{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.hero h2{font-size:21px}
+.hero .tag{margin-top:6px;color:#c3cfe9;font-size:13px;max-width:70ch}
+.hero__chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.hero__chips span{padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);font-size:11.4px;font-weight:700}
+.hero__side{margin-left:auto;display:grid;gap:8px;justify-items:end}
+.hero__act{display:flex;gap:8px;flex-wrap:wrap}
+.chatcard{margin-bottom:12px}
+.chathead{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.chathead .spacer{flex:1}
+.chatlog{display:flex;flex-direction:column;gap:9px;margin:12px 0;max-height:330px;overflow-y:auto;padding-right:2px}
+.msg{max-width:86%;border-radius:14px;padding:10px 13px;font-size:13.1px;line-height:1.55;overflow-wrap:anywhere}
+.msg--u{align-self:flex-end;background:var(--navy);color:#fff;border-bottom-right-radius:5px;font-weight:600}
+.msg--b{align-self:flex-start;background:#f2f5fa;border:1px solid var(--line);color:var(--ink);border-bottom-left-radius:5px}
+.msg--b b{color:var(--ink)}
+.msg--typing{display:flex;gap:4px;align-items:center;padding:12px 14px}
+.msg--typing i{width:6px;height:6px;border-radius:50%;background:#9fb0cc;animation:blink 1s infinite}
+.msg--typing i:nth-child(2){animation-delay:.18s}
+.msg--typing i:nth-child(3){animation-delay:.36s}
+@keyframes blink{0%,60%,100%{opacity:.35;transform:translateY(0)}30%{opacity:1;transform:translateY(-2px)}}
+.botlist{margin:6px 0 0;padding-left:17px;display:grid;gap:3px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.chip--ask{background:#fff;border:1px solid rgba(16,29,56,.18);font-size:11.8px;font-weight:700;color:var(--navy)}
+.chip--ask:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chatbar{display:flex;gap:8px}
+.chatbar input{flex:1;min-width:0;height:42px;border:1px solid var(--line);border-radius:12px;padding:0 13px;
+  font-size:13.2px;background:#fff;color:var(--ink);font-family:inherit}
+.chatbar input:focus{outline:2px solid rgba(227,169,63,.55);border-color:transparent}
+@media (max-width:520px){.msg{max-width:94%}.chatbar{flex-wrap:wrap}.chatbar input{flex:1 1 100%}.chatbar .btn{width:100%}}
+.loc{display:grid;gap:18px;grid-template-columns:1.02fr 1fr;align-items:start}
+.loc__addr{font-weight:700;color:var(--ink);line-height:1.55;max-width:34ch}
+.loc__dl{display:grid;gap:9px}
+.loc__dl > div{display:grid;grid-template-columns:74px 1fr;gap:10px;align-items:baseline;min-width:0}
+.loc__dl > div > span{font-size:10.8px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:800}
+.loc__dl b{font-size:13.2px;overflow-wrap:anywhere;min-width:0}
+.loc__dl a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(16,29,56,.25)}
+.loc__tag{font-style:normal;font-size:9.8px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:#8a6a1f;background:rgba(212,175,55,.18);border:1px solid rgba(212,175,55,.45);border-radius:999px;padding:2px 7px;white-space:nowrap}
+.loc__act{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.loc__map{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#eef2f8;min-height:100%}
+.loc__map iframe{display:block;width:100%;height:100%;min-height:342px;border:0}
+@media (max-width:780px){
+  .loc{grid-template-columns:1fr}
+  .loc__map iframe{min-height:260px}
+}
+.mq{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px 0;margin-top:2px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 26px,#000 calc(100% - 26px),transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 26px,#000 calc(100% - 26px),transparent)}
+.mq__track{display:flex;gap:12px;width:max-content;animation:mqRun 24s linear infinite}
+.mq:hover .mq__track{animation-play-state:paused}
+@keyframes mqRun{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.lg{display:flex;flex-direction:column;align-items:center;gap:6px;width:98px;flex:none}
+.lg i{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;color:#fff;font-style:normal;
+  font-weight:800;font-size:16px;letter-spacing:.03em;box-shadow:0 2px 6px rgba(16,29,56,.14)}
+.lg i.lg__i{background:#fff;border:1px solid var(--line);color:var(--navy);overflow:hidden;padding:8px;box-shadow:0 1px 4px rgba(16,29,56,.10)}
+.lg__i img{width:100%;height:100%;object-fit:contain;display:block}
+.lg b{font-size:11.4px;font-weight:700;color:#4a5876;text-align:center;line-height:1.2;max-width:98px}
+@media (prefers-reduced-motion: reduce){
+  .mq__track{animation-duration:70s}
+  .mq{overflow-x:auto}
+}
+@media (max-width:520px){.lg{width:82px}.lg i{width:46px;height:46px;font-size:15px}}
+.gcards{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media (max-width:780px){.gcards{grid-template-columns:1fr}}
+.gcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;cursor:pointer}
+.gcard:hover{box-shadow:0 6px 18px rgba(16,29,56,.10)}
+.gcard__t{display:flex;gap:12px;align-items:center}
+.gcard__t b{display:block;font-size:15.6px;color:var(--ink)}
+.gcard__t .mut{display:block;font-size:12.1px;margin-top:3px}
+.gcard__badge{width:48px;height:48px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;
+  font-weight:800;font-size:12.4px;letter-spacing:.04em;flex:none}
+.gcard p{font-size:12.8px;color:#4a5876;line-height:1.55;margin:11px 0 12px}
+.gcard__f{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:12px}
+.gcard__go{font-weight:800;font-size:12.7px;color:var(--navy)}
+.grp{margin:0 0 18px}
+.grp__h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 10px}
+.grp__h h3{font-size:16.5px;margin:0;color:var(--navy)}
+.grp__h .mut{font-size:12.3px}
+.form .frow{display:grid;gap:12px;grid-template-columns:1fr 1fr;margin-bottom:12px}
+.form .frow--3{grid-template-columns:1fr 1fr 1fr}
+.f2{display:flex;flex-direction:column;gap:5px;min-width:0}
+.f2 label{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);font-weight:800}
+.f2 input{height:42px;border:1px solid var(--line);border-radius:11px;padding:0 12px;font-size:13.4px;
+  font-family:inherit;color:var(--ink);background:#fff;min-width:0}
+.f2 input:focus{outline:2px solid rgba(227,169,63,.55);border-color:transparent}
+.ferr{color:var(--bad);font-size:11.6px;font-weight:700}
+.cutline{background:#f2f5fa;border:1px dashed rgba(16,29,56,.25);border-radius:12px;padding:10px 13px;
+  font-size:13.4px;color:var(--ink);margin:4px 0 12px}
+.cutline b{font-size:17px;color:var(--navy)}
+.formact{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.formact .btn{height:42px}
+.btn--sm{height:34px;padding:0 12px;font-size:12.4px;gap:6px}
+@media (max-width:640px){.form .frow,.form .frow--3{grid-template-columns:1fr}}
+.segrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.seg{display:inline-flex;gap:4px;background:#eef2f8;border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg__b{border:0;background:transparent;font-family:inherit;font-size:12.4px;font-weight:800;color:#4a5876;
+  padding:7px 13px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;height:32px}
+.seg__b:hover:not([disabled]){color:var(--navy)}
+.seg__b.on{background:var(--navy);color:#fff}
+.seg__b[disabled]{opacity:.42;cursor:not-allowed}
+.seg__b .seg__n{font-size:10.8px;font-weight:800;background:rgba(16,29,56,.10);color:inherit;border-radius:999px;padding:1px 6px}
+.seg__b.on .seg__n{background:rgba(255,255,255,.22)}
+.segrow__hint{font-size:12.2px}
+.lvll{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.05em;border-radius:999px;padding:2px 6px;margin-left:4px;
+  border:1px solid rgba(16,29,56,.22);color:#3d4b68;background:#f2f5fa}
+.lvll--pg{border-color:rgba(227,169,63,.6);color:#8a6a1f;background:rgba(227,169,63,.14)}
+@media (max-width:520px){.seg{width:100%;justify-content:space-between}.seg__b{flex:1;justify-content:center}}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:14px 0 12px;padding-bottom:2px}
+.tab{padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12.6px;font-weight:700;color:#43506b;white-space:nowrap}
+.tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 17px;box-shadow:var(--shadow)}
+.card + .card{margin-top:12px}
+.card h3{font-size:14.5px}
+.card h4{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0 0 9px}
+.grid2{display:grid;grid-template-columns:1.4fr .9fr;gap:12px;align-items:start}
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.kv div{border:1px solid var(--line);border-radius:11px;padding:9px 12px;background:#fbfcfe}
+.kv span{display:block;font-size:10.6px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.kv b{display:block;margin-top:3px;font-size:13.8px;font-variant-numeric:tabular-nums}
+.hl{display:grid;gap:9px;margin-top:12px}
+.hl div{border-left:3px solid var(--gold);padding:2px 0 2px 11px}
+.hl b{display:block;font-size:13.4px}
+.hl span{font-size:12.4px;color:var(--mut)}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;margin-top:6px}
+.tbl th,.tbl td{padding:9px 10px;text-align:left;font-size:12.9px;border-bottom:1px solid var(--line)}
+.tbl thead th{font-size:10.8px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line)}
+.tbl tbody tr:last-child td{border-bottom:0}
+.tbl td b{font-variant-numeric:tabular-nums}
+.tbl .num{text-align:right;font-variant-numeric:tabular-nums}
+.trend{display:inline-flex;align-items:center;gap:5px;font-weight:800}
+.spark{display:inline-flex;gap:3px;align-items:flex-end;height:16px}
+.spark i{width:5px;border-radius:2px;background:#cfd9ea;display:block}
+.spark i:last-child{background:var(--navy)}
+
+/* reviews */
+.rate{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rate__big{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.bars{margin-top:12px;display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:110px minmax(0,1fr) 34px;gap:10px;align-items:center;font-size:12.4px}
+.bar__t{height:7px;border-radius:99px;background:#eef1f7;overflow:hidden}
+.bar__t i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--gold2),var(--gold))}
+.bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;color:var(--mut)}
+.rev{border:1px solid var(--line);border-radius:12px;padding:12px 13px;background:#fff}
+.rev + .rev{margin-top:9px}
+.rev__h{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.rev__h b{font-size:13.8px}
+.rev__h .tagx{font-size:11.6px;color:var(--mut)}
+.rev__score{margin-left:auto;font-weight:800;font-variant-numeric:tabular-nums;color:#8a5c10}
+.rev p{margin-top:8px;font-size:13.2px}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.pc div{font-size:12.5px;border-radius:10px;padding:8px 10px}
+.pc .p{background:var(--okbg);color:#175c37}
+.pc .c{background:#fdf0ef;color:#8d332b}
+.pc b{display:block;font-size:11px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+
+/* qa */
+.qa summary{list-style:none;cursor:pointer;padding:11px 13px;font-size:13.4px;font-weight:650;display:flex;gap:9px;align-items:flex-start}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:before{content:"Q";font-weight:800;color:var(--gold);flex:0 0 auto}
+.qa p{padding:0 13px 12px 32px;font-size:13px;color:var(--mut)}
+.qa[open]{background:#fbfcfe}
+
+/* bell + toast */
+.panel{position:fixed;top:64px;right:16px;width:300px;background:#fff;border:1px solid var(--line);border-radius:14px;
+  box-shadow:0 26px 50px -30px rgba(16,29,56,.55);padding:12px 13px;z-index:40;display:none}
+.panel.on{display:block}
+.panel h4{margin-bottom:8px}
+.panel li{list-style:none;display:flex;gap:9px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12.8px}
+.panel ul{margin:0;padding:0}
+.panel li:last-child{border-bottom:0}
+.panel li b{display:block;font-size:12.8px}
+.panel li span{color:var(--mut);font-size:11.6px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--navy);color:#fff;
+  border-radius:999px;padding:10px 18px;font-size:13px;box-shadow:0 18px 34px -20px rgba(16,29,56,.8);opacity:0;
+  pointer-events:none;transition:.2s ease;z-index:50}
+.toast.on{opacity:1;bottom:26px}
+.foot{margin:26px 0 30px;padding-top:14px;border-top:1px solid var(--line);color:var(--mut);font-size:12px;display:flex;
+  gap:10px;flex-wrap:wrap;justify-content:space-between}
+
+@media (max-width:780px){
+  .grid2{grid-template-columns:1fr}
+  .strip{grid-template-columns:1fr 1fr}
+  .hero__side{margin-left:0;justify-items:start;width:100%}
+  .bar{grid-template-columns:88px minmax(0,1fr) 30px}
+}
+@media (max-width:520px){
+  .row{grid-template-columns:40px minmax(0,1fr);gap:10px}
+  .row__side{grid-column:2;justify-items:start;display:flex;gap:8px}
+  .pc{grid-template-columns:1fr}
+  .kv{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="toast" id="toast"></div>
+<script>
+/* ===========================================================================
+   PSG Campus Compass — a compact, standalone site (no build, no server).
+   Everything is sample data for a demo: fees, cutoffs, placements and reviews
+   are indicative, the same way the reference portals label their data.
+   =========================================================================== */
+var COLLEGES = [
+  {
+    id:'psg', name:'PSG College of Technology', short:'PSG Tech', mono:'PSG\nTECH',
+    type:'Government-aided · Autonomous', estd:1951, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A++', nirf:'NIRF #63 (Engineering)', approval:'AICTE · Anna University',
+    fee:'₹60k – ₹1.5 L / year', seats:'8,500+ students', hostels:'Boys & girls hostels',
+    web:'https://www.psgtech.edu', rating:4.4,
+    cats:{Placements:4.6,Faculty:4.5,Infrastructure:4.7,'Campus life':4.3,'Fees value':4.1,Hostel:4.2},
+    about:'Started in 1951 by PSG & Sons’ Charities, PSG Tech is a government-aided, autonomous institution affiliated to Anna University. Teaching runs on industry-institute interaction: centres of excellence with industry partners, internship and project semesters, and the PSG-STEP incubator inside the campus.',
+    hl:[['Placement cell','Drives across UG and PG with core and IT recruiters'],
+        ['Industry labs','Centres of excellence built with industry partners'],
+        ['PSG-STEP','On-campus incubator for student start-ups'],
+        ['Library & sports','Central library, sports complex, medical centre']],
+    courses:[
+      {n:'B.E. Computer Science & Engineering', seats:180, cut:[194.5,195.5,196.8]},
+      {n:'B.Tech Information Technology', seats:120, cut:[192.8,193.5,194.4]},
+      {n:'B.E. Electronics & Communication', seats:120, cut:[189.6,190.4,191.2]},
+      {n:'B.E. Mechanical Engineering', seats:120, cut:[186.2,186.9,187.6]},
+      {n:'M.E. Computer Science & Engineering', seats:18, cut:[null,null,null], mark:'M.E. \u2014 TANCET / GATE score (sample)'},
+      {n:'M.E. VLSI Design', seats:18, cut:[null,null,null], mark:'M.E. \u2014 TANCET / GATE score (sample)'},
+      {n:'M.E. Industrial Engineering', seats:18, cut:[null,null,null], mark:'M.E. \u2014 TANCET / GATE score (sample)'},
+      {n:'M.C.A.', seats:60, cut:[null,null,null], mark:'M.C.A. \u2014 TANCET + marks (sample)'}
+    ],
+    place:[{y:2025,pct:96,avg:'₹8.8 LPA',high:'₹48 LPA'},{y:2024,pct:96,avg:'₹8.1 LPA',high:'₹46 LPA'},{y:2023,pct:94,avg:'₹7.6 LPA',high:'₹44 LPA'}],
+    recruiters:['Bosch','TCS','Zoho','Deloitte','Qualcomm','Caterpillar','L&T','Hyundai'],
+    reviews:[
+      {n:'Karthik R.',tag:'B.E. CSE · Batch of 2024',r:4.6,
+       t:'Faculty explain the fundamentals well and the placement training starts from the third year. The coding clubs and the industry projects are the best part.',
+       p:'Strong placement training, active clubs',c:'Hostel mess gets crowded at peak hours'},
+      {n:'Divya S.',tag:'B.E. ECE · Batch of 2023',r:4.2,
+       t:'Good laboratories and a calm campus. Core companies do come, though the software crowd is bigger in every drive.',
+       p:'Well-equipped labs, safe campus',c:'Core-company slots are fewer than IT'}
+    ],
+    qa:[
+      ['How do I apply to PSG Tech?','TNEA counselling handles government-quota seats; management-quota applications open on the college portal after the TNEA rank list.'],
+      ['Is hostel available?','Yes — separate boys and girls hostels inside the campus, with mess facilities. Apply early; rooms fill up before the semester starts.'],
+      ['Which documents should I keep ready?','Class 10 & 12 marksheets, transfer certificate, community/nativity certificate, entrance scorecard if any, and 4 passport photos.'],
+      ['Do I need a cutoff for management quota?','Management seats are filled on Class 12 marks plus a short interaction; the offer letter states the fee slab.']
+    ]
+  },
+  {
+    id:'psgitech', name:'PSG Institute of Technology and Applied Research', short:'PSG iTech', mono:'PSG\niTech',
+    type:'Private · Autonomous', estd:2015, city:'Neelambur, Coimbatore',
+    naac:'NAAC A', nirf:'Affiliated to Anna University', approval:'AICTE · Anna University',
+    fee:'₹1.1 L – ₹2.2 L / year', seats:'2,000+ students', hostels:'Boys & girls hostels',
+    web:'https://www.psgitech.ac.in', rating:4.2,
+    cats:{Placements:4.3,Faculty:4.2,Infrastructure:4.5,'Campus life':4.1,'Fees value':3.8,Hostel:4.2},
+    about:'The youngest engineering campus of the PSG group, built on a 40-acre campus on the Avinashi Road side. Curriculum is fully autonomous with a semester-long industry internship, and the group’s placement network runs the final-year drives.',
+    hl:[['Young campus','Opened in 2015 with modern blocks and labs'],
+        ['Autonomous syllabus','Updated with industry advisors each year'],
+        ['Placement support','Shares the PSG group placement network'],
+        ['Hostel in campus','Boys and girls blocks with mess']],
+    courses:[
+      {n:'B.E. Computer Science & Engineering', seats:120, cut:[191.2,192.4,193.5]},
+      {n:'B.E. Electronics & Communication', seats:60, cut:[186.5,187.4,188.3]},
+      {n:'B.E. Mechanical Engineering', seats:60, cut:[180.8,181.5,182.4]},
+      {n:'B.Tech Artificial Intelligence & Data Science', seats:60, cut:[189.4,190.6,191.8]}
+    ],
+    place:[{y:2025,pct:92,avg:'₹6.9 LPA',high:'₹32 LPA'},{y:2024,pct:90,avg:'₹6.2 LPA',high:'₹28 LPA'},{y:2023,pct:88,avg:'₹5.8 LPA',high:'₹24 LPA'}],
+    recruiters:['TCS','Infosys','Zoho','Bosch','L&T','Hyundai'],
+    reviews:[
+      {n:'Aravind M.',tag:'B.E. Mech · Batch of 2024',r:4.1,
+       t:'Modern campus, well-kept labs and approachable staff. The placement training sessions start in the fifth semester.',
+       p:'New labs, calm environment',c:'Fewer alumni for referrals than the older PSG campus'},
+      {n:'Sneha K.',tag:'B.Tech AI & DS · Batch of 2025',r:4.3,
+       t:'The AI lab has good systems and the faculty bring in industry case studies. Hostel is inside campus, so travel is easy.',
+       p:'Good AI lab, hostel on campus',c:'Bus frequency to the city drops after 7 pm'}
+    ],
+    qa:[
+      ['Is PSG iTech the same as PSG Tech?','No — it is a separate campus of the same group (started 2015) with its own autonomous syllabus and its own TNEA code.'],
+      ['Is hostel compulsory?','Not compulsory, but most first-year students stay in the campus hostel because it is outside the city centre.'],
+      ['How are placements compared to PSG Tech?','The group placement network is shared, though recruiters visiting the older campus are usually more.']
+    ]
+  },
+  {
+    id:'psgcas', name:'PSG College of Arts & Science', short:'PSG CAS', mono:'PSG\nCAS',
+    type:'Private · Autonomous', estd:1947, city:'Civil Aerodrome Post, Coimbatore',
+    naac:'NAAC A+', nirf:'Ranked among TN arts & science colleges', approval:'Bharathiar University',
+    fee:'₹30k – ₹70k / year', seats:'7,000+ students', hostels:'Women’s hostel',
+    web:'https://www.psgcas.ac.in', rating:4.3,
+    cats:{Placements:4.1,Faculty:4.4,Infrastructure:4.5,'Campus life':4.6,'Fees value':4.7,Hostel:4.0},
+    about:'One of the oldest and largest arts and science colleges in Tamil Nadu, started in 1947. Over 30 undergraduate programmes across science, commerce and arts, with a strong cultural calendar and a large alumni body.',
+    hl:[['Since 1947','One of the oldest colleges in Tamil Nadu'],
+        ['30+ UG programmes','Science, commerce, arts and management'],
+        ['Cultural calendar','Festivals, clubs and inter-college events'],
+        ['Value fees','Aided programmes cost a fraction of self-financing']],
+    courses:[
+      {n:'B.Sc. Computer Science', seats:140, cut:[null,null,null], mark:'Cutoff by Class 12 marks'},
+      {n:'B.Com. (Accounting & Finance)', seats:120, cut:[null,null,null], mark:'Cutoff by Class 12 marks'},
+      {n:'B.Sc. Microbiology', seats:60, cut:[null,null,null], mark:'Cutoff by Class 12 marks'},
+      {n:'BBA Business Administration', seats:80, cut:[null,null,null], mark:'Cutoff by Class 12 marks'}
+    ],
+    place:[{y:2025,pct:78,avg:'₹3.9 LPA',high:'₹12 LPA'},{y:2024,pct:76,avg:'₹3.6 LPA',high:'₹10 LPA'},{y:2023,pct:74,avg:'₹3.4 LPA',high:'₹9 LPA'}],
+    recruiters:['TCS','Wipro','Zoho','Sutherland','ICICI','Kotak'],
+    reviews:[
+      {n:'Priya L.',tag:'B.Sc. CS · Batch of 2024',r:4.4,
+       t:'Great teachers and a lively campus. The computer lab timings could be longer during the project semester.',
+       p:'Lively campus, helpful faculty',c:'Lab slots are limited in the final semester'},
+      {n:'Hari V.',tag:'B.Com. AF · Batch of 2023',r:4.5,
+       t:'For the fee we pay, the exposure is excellent — commerce association events, industry visits and internships arranged by the department.',
+       p:'Good value fees, many events',c:'Placements lean towards BPO and banking'}
+    ],
+    qa:[
+      ['Does PSG CAS take students without Maths in Class 12?','Most science programmes ask for Maths or Biology, but B.Com., BBA and arts programmes accept any stream.'],
+      ['Is there a hostel?','A women’s hostel is run on campus; men usually travel from the city.'],
+      ['How is placement here?','The placement cell brings in IT services, BPO and banking recruiters; a fair share of students also go for higher studies.']
+    ]
+  },
+  {
+    id:'psgim', name:'PSG Institute of Management', short:'PSG IM', mono:'PSG\nIM',
+    type:'Private · Business school', estd:1965, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A', nirf:'Top-5 B-schools in Tamil Nadu (private)', approval:'AICTE · Bharathiar University',
+    fee:'₹5.5 L – ₹7 L (2 years)', seats:'180 seats / year', hostels:'Hostel for men & women',
+    web:'https://www.psgim.ac.in', rating:4.1,
+    cats:{Placements:4.3,Faculty:4.2,Infrastructure:4.1,'Campus life':4.2,'Fees value':3.7,Hostel:3.9},
+    about:'A two-year, full-time MBA of the PSG group, running since 1965. Admissions come through TANCET/CAT/MAT scores plus a group discussion and interview; specialisations cover marketing, finance, HR, analytics and operations.',
+    hl:[['Since 1965','Among the oldest B-schools in the state'],
+        ['Specialisations','Marketing, finance, HR, business analytics'],
+        ['Case-based teaching','Live projects with Coimbatore industry'],
+        ['Summer internships','Two-month placement-linked internships']],
+    courses:[
+      {n:'MBA Marketing', seats:60, cut:[null,null,null], mark:'TANCET / CAT scores'},
+      {n:'MBA Finance', seats:60, cut:[null,null,null], mark:'TANCET / CAT scores'},
+      {n:'MBA Business Analytics', seats:30, cut:[null,null,null], mark:'TANCET / CAT scores'},
+      {n:'MBA Human Resources', seats:30, cut:[null,null,null], mark:'TANCET / CAT scores'}
+    ],
+    place:[{y:2025,pct:92,avg:'₹7.4 LPA',high:'₹18 LPA'},{y:2024,pct:90,avg:'₹7.0 LPA',high:'₹16 LPA'},{y:2023,pct:88,avg:'₹6.6 LPA',high:'₹15 LPA'}],
+    recruiters:['Deloitte','ICICI Bank','HDFC Bank','Cognizant','Hyundai','Asian Paints'],
+    reviews:[
+      {n:'Manoj B.',tag:'MBA Finance · Batch of 2024',r:4.0,
+       t:'Case discussions and the finance lab are the highlights. Placement prep starts early with mock GDs.',
+       p:'Good finance exposure, early prep',c:'Fees are on the higher side for a state B-school'},
+      {n:'Anitha R.',tag:'MBA HR · Batch of 2023',r:4.2,
+       t:'The faculty come with industry experience, so classes stay practical. The campus shares the PSG Tech energy next door.',
+       p:'Practical classes, strong alumni',c:'Hostel is shared with the main campus'}
+    ],
+    qa:[
+      ['Which exam do I need for PSG IM?','TANCET is the main route; CAT/MAT scores are also accepted along with a group discussion and personal interview.'],
+      ['Is work experience needed?','No. A large part of every batch joins straight after a degree.'],
+      ['What are the hostel options?','Hostel accommodation is available in the PSG campus hostel for both men and women.']
+    ]
+  },
+  {
+    id:'psgimsr', name:'PSG Institute of Medical Sciences & Research', short:'PSG IMSR', mono:'PSG\nIMSR',
+    type:'Private · Medical college', estd:1985, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A', nirf:'Recognised by NMC', approval:'NMC · Dr. MGR Medical University',
+    fee:'₹70k (govt quota) – ₹12 L / year', seats:'150 MBBS seats', hostels:'Hostels & quarters',
+    web:'https://www.psgimsr.ac.in', rating:4.5,
+    cats:{Placements:4.6,Faculty:4.6,Infrastructure:4.4,'Campus life':4.3,'Fees value':4.0,Hostel:4.1},
+    about:'A 700-bed teaching hospital with an attached medical college, offering MBBS and postgraduate programmes. Admissions run through NEET-UG and NEET-PG state counselling, with an in-house hospital for clinical training.',
+    hl:[['700-bed hospital','Clinical training inside the same campus'],
+        ['NEET-based','UG and PG admissions through state counselling'],
+        ['PG programmes','MD/MS in major clinical departments'],
+        ['Research cell','Funded research and paper presentations']],
+    courses:[
+      {n:'MBBS', seats:150, cut:[null,null,null], mark:'NEET-UG based'},
+      {n:'MD General Medicine', seats:12, cut:[null,null,null], mark:'NEET-PG based'},
+      {n:'MS General Surgery', seats:10, cut:[null,null,null], mark:'NEET-PG based'},
+      {n:'B.Sc. Nursing', seats:60, cut:[null,null,null], mark:'Class 12 merit'}
+    ],
+    place:[{y:2025,pct:100,avg:'₹9.5 LPA',high:'₹24 LPA'},{y:2024,pct:100,avg:'₹9.0 LPA',high:'₹22 LPA'},{y:2023,pct:100,avg:'₹8.4 LPA',high:'₹20 LPA'}],
+    recruiters:['PSG Hospitals','Kovai Medical Center','Apollo','Fortis','Government hospitals'],
+    reviews:[
+      {n:'Dr. Nivetha S.',tag:'MBBS · Batch of 2023',r:4.7,
+       t:'Patient flow is huge, so learning is hands-on from the second year. The faculty push you to present cases regularly.',
+       p:'Heavy clinical exposure, supportive faculty',c:'Duty hours are long and tiring'},
+      {n:'Surya P.',tag:'MS Surgery · Batch of 2024',r:4.4,
+       t:'Operation theatre exposure is excellent. The library and the digital resources are open till late.',
+       p:'Great OT exposure, good library',c:'Hostel rooms are basic'}
+    ],
+    qa:[
+      ['How do I get an MBBS seat here?','Qualify NEET-UG, register for the Tamil Nadu state counselling, and choose PSG IMSR in your preference list.'],
+      ['Is the hospital attached to the college?','Yes — the 700-bed PSG Hospitals is on the same campus, so clinical postings start early.'],
+      ['Are there PG courses?','Yes, MD/MS seats across major clinical departments through NEET-PG counselling.']
+    ]
+  },
+  {
+    id:'psgnursing', name:'PSG College of Nursing', short:'PSG Nursing', mono:'PSG\nNURS',
+    type:'Private · Nursing college', estd:1992, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A', nirf:'Approved by TN Nurses & Midwives Council', approval:'TN Dr. MGR Medical University',
+    fee:'₹40k – ₹90k / year', seats:'100 seats / year', hostels:'Women’s hostel',
+    web:'https://www.psgnursing.ac.in', rating:4.2,
+    cats:{Placements:4.3,Faculty:4.4,Infrastructure:4.1,'Campus life':4.0,'Fees value':4.2,Hostel:4.1},
+    about:'A nursing college attached to the PSG Hospitals group, offering B.Sc. Nursing, P.B.B.Sc. and M.Sc. Nursing. Clinical practice happens in the 700-bed hospital next door, with community postings in nearby villages.',
+    hl:[['Hospital attached','Clinical practice in PSG Hospitals'],
+        ['Community postings','Rural health camps and school health programmes'],
+        ['M.Sc. Nursing','Specialisations in medical, surgical, OBG and paediatrics'],
+        ['Licensed abroad','Alumni working in the UK, Gulf and Singapore']],
+    courses:[
+      {n:'B.Sc. Nursing', seats:100, cut:[null,null,null], mark:'Class 12 (Biology) merit'},
+      {n:'P.B.B.Sc. Nursing', seats:40, cut:[null,null,null], mark:'Diploma nurses with experience'},
+      {n:'M.Sc. Nursing (Medical-Surgical)', seats:15, cut:[null,null,null], mark:'B.Sc. Nursing with 55%'}
+    ],
+    place:[{y:2025,pct:97,avg:'₹4.6 LPA',high:'₹8 LPA'},{y:2024,pct:95,avg:'₹4.2 LPA',high:'₹7 LPA'},{y:2023,pct:94,avg:'₹4.0 LPA',high:'₹6.5 LPA'}],
+    recruiters:['PSG Hospitals','Apollo','Kauvery','Manipal','Overseas recruiters'],
+    reviews:[
+      {n:'Lakshmi N.',tag:'B.Sc. Nursing · Batch of 2024',r:4.3,
+       t:'The clinical hours are the real education. Ward postings with the hospital staff teach you more than the classroom.',
+       p:'Hands-on clinical hours, kind faculty',c:'Night duty schedule in the third year is tough'},
+      {n:'Jenifer A.',tag:'M.Sc. Nursing · Batch of 2023',r:4.1,
+       t:'The college helped me clear the IELTS and apply to the UK. Alumni network abroad is helpful.',
+       p:'Overseas guidance, alumni support',c:'Campus is small compared to the main PSG colleges'}
+    ],
+    qa:[
+      ['Can I join with a Biology group in Class 12?','Yes — B.Sc. Nursing accepts the Biology group. Maths-group students are not eligible for the clinical programmes.'],
+      ['Do you help with overseas placements?','The placement cell connects graduates with overseas recruiters and runs IELTS/OSCE coaching every year.'],
+      ['Is hostel facility available?','Yes, a women’s hostel runs inside the campus with mess facilities.']
+    ]
+  },
+  {
+    id:'psgpharma', name:'PSG College of Pharmacy', short:'PSG Pharmacy', mono:'PSG\nPHARM',
+    type:'Private · Pharmacy college', estd:2001, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A', nirf:'Recognised by PCI', approval:'Pharmacy Council of India',
+    fee:'₹45k – ₹90k / year', seats:'100 seats / year', hostels:'Shared PSG hostels',
+    web:'https://www.psgpharmacy.ac.in', rating:4.2,
+    cats:{Placements:4.2,Faculty:4.3,Infrastructure:4.2,'Campus life':4.0,'Fees value':4.3,Hostel:4.0},
+    about:'A Pharmacy Council of India approved college offering B.Pharm, M.Pharm and Pharm.D programmes. Industrial visits, formulation labs and a research focus carry the teaching; hospital practice happens with the PSG hospital pharmacy.',
+    hl:[['PCI approved','B.Pharm, M.Pharm and Pharm.D programmes'],
+        ['Formulation labs','Machine room with tablet, capsule and ointment lines'],
+        ['Hospital practice','Clinical pharmacy rounds in PSG Hospitals'],
+        ['Research','Analytical labs for drug testing projects']],
+    courses:[
+      {n:'B.Pharm', seats:100, cut:[null,null,null], mark:'Class 12 (Bio/Maths) merit'},
+      {n:'Pharm.D', seats:30, cut:[null,null,null], mark:'Class 12 with 50%'},
+      {n:'M.Pharm (Pharmaceutics)', seats:18, cut:[null,null,null], mark:'B.Pharm with 55%'}
+    ],
+    place:[{y:2025,pct:88,avg:'₹4.4 LPA',high:'₹9 LPA'},{y:2024,pct:86,avg:'₹4.1 LPA',high:'₹8 LPA'},{y:2023,pct:84,avg:'₹3.8 LPA',high:'₹7 LPA'}],
+    recruiters:['Cipla','Sun Pharma','Aurobindo','Apollo Pharmacy','GSK'],
+    reviews:[
+      {n:'Vignesh S.',tag:'B.Pharm · Batch of 2024',r:4.2,
+       t:'The machine room and the analytical lab are well maintained. Faculty guide projects seriously in the final year.',
+       p:'Good labs, project guidance',c:'Industry visits happen only once a year'}
+    ],
+    qa:[
+      ['Can Maths-group students join B.Pharm?','Yes — both Biology and Maths group students are eligible for B.Pharm.'],
+      ['What are the research facilities?','Analytical, formulation and microbiology labs with HPLC and dissolution apparatus for student projects.']
+    ]
+  },
+  {
+    id:'psgphysio', name:'PSG College of Physiotherapy', short:'PSG Physio', mono:'PSG\nPHYSIO',
+    type:'Private · Physiotherapy college', estd:1998, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A', nirf:'Approved by TN Dr. MGR Medical University', approval:'TN Dr. MGR Medical University',
+    fee:'₹40k – ₹85k / year', seats:'60 seats / year', hostels:'Women’s hostel & shares',
+    web:'https://www.psgphysiotherapy.ac.in', rating:4.3,
+    cats:{Placements:4.4,Faculty:4.4,Infrastructure:4.1,'Campus life':4.0,'Fees value':4.3,Hostel:3.9},
+    about:'Offers BPT and MPT programmes with clinical training in the PSG Hospital physiotherapy department — orthopaedics, neurology, sports and cardiopulmonary rehabilitation.',
+    hl:[['Hospital OPD','Treat patients under supervision from year two'],
+        ['Sports rehab','Ties with local sports clubs for practical work'],
+        ['MPT specialisations','Ortho, neuro, sports and cardiopulmonary'],
+        ['Home care camps','Community rehab camps in nearby panchayats']],
+    courses:[
+      {n:'BPT (Physiotherapy)', seats:60, cut:[null,null,null], mark:'Class 12 (Bio) merit'},
+      {n:'MPT Orthopaedics', seats:10, cut:[null,null,null], mark:'BPT with 55%'},
+      {n:'MPT Neurology', seats:8, cut:[null,null,null], mark:'BPT with 55%'}
+    ],
+    place:[{y:2025,pct:94,avg:'₹4.2 LPA',high:'₹8 LPA'},{y:2024,pct:92,avg:'₹3.9 LPA',high:'₹7 LPA'},{y:2023,pct:90,avg:'₹3.6 LPA',high:'₹6 LPA'}],
+    recruiters:['PSG Hospitals','Kovai Medical Center','Sports academies','Rehab centres','Home-care firms'],
+    reviews:[
+      {n:'Deepa M.',tag:'BPT · Batch of 2024',r:4.4,
+       t:'From the second year you actually treat patients in the OPD. That confidence is what gets you a job quickly.',
+       p:'Real patient handling early',c:'Equipment for sports rehab is limited'}
+    ],
+    qa:[
+      ['Is NEET required for BPT?','No — BPT admissions here are on Class 12 (Biology group) marks, without NEET.'],
+      ['What is the duration of BPT?','Four years of study plus six months of compulsory internship.']
+    ]
+  },
+  {
+    id:'psgpoly', name:'PSG Polytechnic College', short:'PSG Polytechnic', mono:'PSG\nPOLY',
+    type:'Government-aided · Polytechnic', estd:1936, city:'Peelamedu, Coimbatore',
+    naac:'NAAC A', nirf:'One of the oldest polytechnics in India', approval:'AICTE · DOTE',
+    fee:'₹8k – ₹25k / year', seats:'500+ seats / year', hostels:'Boys hostel',
+    web:'https://www.psgpolytechnic.ac.in', rating:4.1,
+    cats:{Placements:4.2,Faculty:4.3,Infrastructure:4.0,'Campus life':3.9,'Fees value':4.8,Hostel:3.8},
+    about:'Started in 1936, this is one of the oldest polytechnic colleges in the country. Diploma admissions run through the TN DOTE single-window counselling on Class 10 marks, with strong workshop training and lateral entry into engineering degrees afterwards.',
+    hl:[['Since 1936','Almost nine decades of workshop training'],
+        ['DOTE counselling','Diploma seats allotted on Class 10 marks'],
+        ['Lateral entry','Diploma holders can join B.E. second year'],
+        ['Very low fees','Aided programmes cost a few thousand a year']],
+    courses:[
+      {n:'Diploma in Mechanical Engineering', seats:120, cut:[null,null,null], mark:'TN DOTE single-window'},
+      {n:'Diploma in Electrical & Electronics', seats:60, cut:[null,null,null], mark:'TN DOTE single-window'},
+      {n:'Diploma in Civil Engineering', seats:60, cut:[null,null,null], mark:'TN DOTE single-window'},
+      {n:'Diploma in Computer Engineering', seats:60, cut:[null,null,null], mark:'TN DOTE single-window'}
+    ],
+    place:[{y:2025,pct:82,avg:'₹2.9 LPA',high:'₹5.5 LPA'},{y:2024,pct:80,avg:'₹2.7 LPA',high:'₹5 LPA'},{y:2023,pct:78,avg:'₹2.5 LPA',high:'₹4.5 LPA'}],
+    recruiters:['L&T','TVS','Roots Industries','Pricol','Lakshmi Machine Works'],
+    reviews:[
+      {n:'Sanjay K.',tag:'Diploma Mech · Batch of 2024',r:4.1,
+       t:'The workshops are the best part — you spend real hours on machines. Placement support is decent for core companies.',
+       p:'Hands-on workshops, low fees',c:'Classrooms need renovation'}
+    ],
+    qa:[
+      ['How do I join after Class 10?','Apply through the TN DOTE single-window portal after your Class 10 results; branch allotment follows the rank list.'],
+      ['Can I do a degree later?','Yes — diploma holders can join B.E./B.Tech second year directly through lateral entry.']
+    ]
+  },
+  {
+    id:'psgias', name:'PSG Institute of Advanced Studies', short:'PSG IAS', mono:'PSG\nIAS',
+    type:'Private · Research institute', estd:2007, city:'Peelamedu, Coimbatore',
+    naac:'Research institute', nirf:'PhD & research programmes', approval:'Anna University research centre',
+    fee:'₹42k – ₹60k / year', seats:'Research scholars', hostels:'Shared PSG hostels',
+    web:'https://www.psgias.ac.in', rating:4.0,
+    cats:{Placements:3.8,Faculty:4.4,Infrastructure:4.2,'Campus life':3.9,'Fees value':4.2,Hostel:4.0},
+    about:'The research wing of the PSG group — doctoral programmes, sponsored projects and industry consultancy. Scholars work alongside the engineering and management campuses on funded research in materials, energy, computing and management.',
+    hl:[['Funded projects','DST, AICTE and industry-sponsored research'],
+        ['PhD programmes','Part-time and full-time research scholars'],
+        ['Consultancy','Testing and consulting for Coimbatore industry'],
+        ['Publication support','Conference funding for accepted papers']],
+    courses:[
+      {n:'PhD Engineering & Technology', seats:null, cut:[null,null,null], mark:'Research entrance & interview'},
+      {n:'PhD Management Studies', seats:null, cut:[null,null,null], mark:'Research entrance & interview'}
+    ],
+    place:[{y:2025,pct:null,avg:'—',high:'—'},{y:2024,pct:null,avg:'—',high:'—'},{y:2023,pct:null,avg:'—',high:'—'}],
+    recruiters:['Academia','R&D units','Consulting firms'],
+    reviews:[
+      {n:'Ramesh V.',tag:'PhD · Batch of 2024',r:4.0,
+       t:'Good guidance and access to the group’s labs. The stipend depends on the project funding, so check before joining.',
+       p:'Good lab access, publication support',c:'Stipend depends on the funded project'}
+    ],
+    qa:[
+      ['How do I apply for a PhD?','Through the research entrance test and interview announced on the institute website, usually twice a year.'],
+      ['Is a stipend available?','Scholars on funded projects get a stipend; the amount depends on the sponsoring project.']
+    ]
+  },
+  /* ---------------------------------------------------- Karpagam group ---- */
+  {
+    id:'kahe', grp:'karpagam', name:'Karpagam Academy of Higher Education', short:'Karpagam KAHE', mono:'KAHE',
+    type:'Deemed university · Private', estd:2008, city:'Eachanari, Coimbatore',
+    naac:'NAAC A+', nirf:'NIRF 101–150 (University)', approval:'UGC · AICTE',
+    fee:'₹55k – ₹1.6 L / year', seats:'8,000+ students', hostels:'Boys & girls hostels',
+    web:'https://kahedu.edu.in', rating:4.1,
+    cats:{Placements:4.0,Faculty:4.1,Infrastructure:4.3,'Campus life':4.2,'Fees value':3.9,Hostel:4.0},
+    about:'Declared a deemed-to-be university in 2008, KAHE runs engineering, arts & science, commerce, management and pharmacy faculties on one campus at Eachanari on the Pollachi main road. Teaching mixes classroom work with internships, and the placement cell handles IT, core and BFSI drives.',
+    hl:[['One campus','Engineering, arts & science, management and pharmacy together'],
+        ['Deemed university','UGC-recognised, NAAC A+ accredited'],
+        ['Placement cell','IT, core and BFSI drives through the year'],
+        ['Hostels & buses','Boys and girls hostels with buses across the city']],
+    courses:[
+      {n:'B.E. Computer Science & Engineering', seats:120, cut:[176.5,178.4,180.2]},
+      {n:'B.Sc. Computer Science', seats:90, cut:[null,null,null], mark:'Merit-based admission — Class 12 marks (sample)'},
+      {n:'B.Com (Computer Applications)', seats:120, cut:[null,null,null], mark:'Merit-based admission — Class 12 marks (sample)'},
+      {n:'BBA', seats:60, cut:[null,null,null], mark:'Merit-based admission — Class 12 marks (sample)'},
+      {n:'MBA', seats:120, cut:[null,null,null], mark:'MBA — TANCET / CAT score (sample)'},
+      {n:'M.Sc. Data Science', seats:30, cut:[null,null,null], mark:'Merit-based admission — degree marks (sample)'}
+    ],
+    place:[{y:2025,pct:85,avg:'₹4.2 LPA',high:'₹11 LPA'},{y:2024,pct:83,avg:'₹3.9 LPA',high:'₹10 LPA'},{y:2023,pct:80,avg:'₹3.6 LPA',high:'₹9 LPA'}],
+    recruiters:['TCS','Zoho','Deloitte','ICICI Bank','Kotak','Sutherland'],
+    reviews:[
+      {n:'Praveen M.',tag:'B.E. CSE · Batch of 2024',r:4.2,
+       t:'One campus la engineering, commerce and management ellame irukku, so friends circle periyadhu. Placement training third year-la start aagum.',
+       p:'Single campus, active placement cell',c:'Hostel rooms fill up fast'},
+      {n:'Swetha K.',tag:'B.Com CA · Batch of 2023',r:4.0,
+       t:'Commerce department faculty are helpful and the computer applications lab is well maintained. BFSI companies come for the end-of-course drives.',
+       p:'Good labs, BFSI recruiters',c:'Bus routes are limited on Sundays'}
+    ],
+    qa:[
+      ['How do I apply to KAHE?','Apply on the university portal; engineering seats go through TNEA counselling for the government quota, while arts, science, commerce and management seats are filled on Class 12 marks.'],
+      ['Is hostel available?','Yes — separate boys and girls hostels at Eachanari with mess facilities; apply early since rooms fill up before the semester.'],
+      ['Which documents should I keep ready?','Class 10 & 12 marksheets, transfer certificate, community certificate, degree marksheets for PG, and 4 passport photos.'],
+      ['Do you have MBA?','Yes — MBA takes TANCET or CAT scores along with the degree marks. The management faculty sits on the same Eachanari campus.']
+    ]
+  },
+  {
+    id:'kce', grp:'karpagam', name:'Karpagam College of Engineering', short:'Karpagam KCE', mono:'KCE',
+    type:'Private · Autonomous', estd:2000, city:'Othakkal Mandapam, Coimbatore',
+    naac:'NAAC A', nirf:'NIRF band 201–300 (Engineering)', approval:'AICTE · Anna University',
+    fee:'₹85k – ₹2.2 L / year', seats:'3,500+ students', hostels:'Boys & girls hostels',
+    web:'https://kce.ac.in', rating:4.2,
+    cats:{Placements:4.3,Faculty:4.1,Infrastructure:4.2,'Campus life':4.2,'Fees value':4.0,Hostel:3.9},
+    about:'Autonomous engineering college on the Coimbatore–Pollachi road, running since 2000 with AICTE approval and Anna University affiliation. CSE, AI & Data Science, ECE and mechanical are the big branches, and the placement cell brings IT, core and auto-component recruiters to the campus.',
+    hl:[['Autonomous','Syllabus and exams framed in-house under Anna University'],
+        ['Core branches','CSE, AI & DS, ECE, EEE and mechanical with full lab facilities'],
+        ['Placement drives','IT and auto-component recruiters every season'],
+        ['Buses','College buses across Coimbatore and nearby towns']],
+    courses:[
+      {n:'B.E. Computer Science & Engineering', seats:180, cut:[184.0,185.5,187.2]},
+      {n:'B.Tech. Artificial Intelligence & Data Science', seats:60, cut:[178.0,180.0,182.5]},
+      {n:'B.E. Electronics & Communication', seats:120, cut:[176.4,177.8,179.5]},
+      {n:'B.E. Mechanical Engineering', seats:120, cut:[164.5,166.0,168.2]},
+      {n:'M.E. Computer Science & Engineering', seats:18, cut:[null,null,null], mark:'M.E. — TANCET / GATE score (sample)'},
+      {n:'MBA', seats:60, cut:[null,null,null], mark:'MBA — TANCET + marks (sample)'}
+    ],
+    place:[{y:2025,pct:88,avg:'₹4.6 LPA',high:'₹12 LPA'},{y:2024,pct:86,avg:'₹4.3 LPA',high:'₹11 LPA'},{y:2023,pct:84,avg:'₹4.0 LPA',high:'₹10 LPA'}],
+    recruiters:['TCS','Infosys','Zoho','Cognizant','Bosch','Wipro'],
+    reviews:[
+      {n:'Vignesh S.',tag:'B.E. ECE · Batch of 2024',r:4.3,
+       t:'Autonomous syllabus, so exams are on time and the labs are open in the evening. Placement training from fifth semester with aptitude and coding rounds.',
+       p:'Autonomous exams, open labs, placement training',c:'Campus is away from the city'},
+      {n:'Nandhini R.',tag:'B.Tech AI & DS · Batch of 2025',r:4.1,
+       t:'AI & DS department is new but the faculty are from industry projects. Zoho and Cognizant came for internships in the fourth year.',
+       p:'New-age branch, internship drives',c:'Hostel mess food is average'}
+    ],
+    qa:[
+      ['How do I apply to Karpagam College of Engineering?','TNEA counselling fills the government-quota engineering seats; management-quota applications open on kce.ac.in after the TNEA rank list.'],
+      ['What is the CSE cutoff?','Around 187 (sample) in the last round — the courses tab shows the three-year trend for every branch.'],
+      ['Is hostel available?','Yes — separate boys and girls hostels inside the campus with mess and Wi-Fi, plus college buses for day scholars.'],
+      ['Do you have MBA?','Yes — a two-year MBA (TANCET + marks) alongside the M.E. programmes.']
+    ]
+  },
+  {
+    id:'kit', grp:'karpagam', name:'Karpagam Institute of Technology', short:'Karpagam KIT', mono:'KIT',
+    type:'Private · Engineering', estd:2008, city:'Seerapalayam, Coimbatore',
+    naac:'NAAC A', nirf:'Approved by AICTE', approval:'AICTE · Anna University',
+    fee:'₹80k – ₹2 L / year', seats:'1,800+ students', hostels:'Boys & girls hostels',
+    web:'https://karpagam.ac.in', rating:4.0,
+    cats:{Placements:4.0,Faculty:4.0,Infrastructure:4.1,'Campus life':4.0,'Fees value':4.1,Hostel:3.8},
+    about:'A compact engineering campus at Seerapalayam, near the Karpagam group’s Eachanari base. Small branch sizes mean closer faculty contact, and the placement cell focuses on IT services and Coimbatore’s manufacturing and pump industries.',
+    hl:[['Small branches','60-student intakes keep the faculty-student ratio tight'],
+        ['Local industry','Pump, foundry and textile-machinery companies hire from here'],
+        ['Labs','CSE, AI & DS, ECE and mechanical labs with project space'],
+        ['Transport','College buses across the city and nearby towns']],
+    courses:[
+      {n:'B.E. Computer Science & Engineering', seats:60, cut:[168.0,169.5,171.8]},
+      {n:'B.Tech. Artificial Intelligence & Data Science', seats:60, cut:[162.0,164.0,166.5]},
+      {n:'B.E. Electronics & Communication', seats:60, cut:[158.0,160.0,162.5]},
+      {n:'B.E. Mechanical Engineering', seats:60, cut:[150.0,152.0,154.5]},
+      {n:'M.E. Computer Science & Engineering', seats:18, cut:[null,null,null], mark:'M.E. — TANCET / GATE score (sample)'}
+    ],
+    place:[{y:2025,pct:82,avg:'₹3.8 LPA',high:'₹9.5 LPA'},{y:2024,pct:80,avg:'₹3.5 LPA',high:'₹9 LPA'},{y:2023,pct:78,avg:'₹3.2 LPA',high:'₹8 LPA'}],
+    recruiters:['TCS','Zoho','TVS','Pricol','Roots Industries','Infosys'],
+    reviews:[
+      {n:'Arun P.',tag:'B.E. Mechanical · Batch of 2024',r:4.0,
+       t:'Branch size chinna, so staff ellarukkum peru theriyum. Coimbatore pump and foundry companies campus-ku vandhu core roles kuduthanga.',
+       p:'Close faculty contact, core-company visits',c:'Fewer IT offers than bigger colleges'},
+      {n:'Keerthana V.',tag:'B.E. CSE · Batch of 2025',r:3.9,
+       t:'Coding club and weekly aptitude tests helped a lot. Hostel is walkable from the department block.',
+       p:'Active coding club, near hostel',c:'Sports ground is small'}
+    ],
+    qa:[
+      ['How do I join Karpagam Institute of Technology?','Government-quota seats come through TNEA counselling; management seats are filled from Class 12 marks on the college portal.'],
+      ['CSE cutoff enna?','Around 172 (sample) in the last round — see the courses tab for the three-year trend.'],
+      ['Hostel irukka?','Yes — boys and girls hostels on the campus with mess facilities and bus transport for day scholars.']
+    ]
+  },
+  {
+    id:'kfmsr', grp:'karpagam', name:'Karpagam Faculty of Medical Sciences & Research', short:'Karpagam Medical', mono:'KARPA\nMED',
+    type:'Private · Medical college', estd:2014, city:'Othakkal Mandapam, Coimbatore',
+    naac:'NAAC A', nirf:'Recognised by NMC', approval:'NMC · Dr. MGR Medical University',
+    fee:'₹1.2 L (govt quota) – ₹18 L / year', seats:'150 MBBS seats', hostels:'Hostels & quarters',
+    web:'https://karpagam.ac.in', rating:4.4,
+    cats:{Placements:4.5,Faculty:4.4,Infrastructure:4.4,'Campus life':4.2,'Fees value':3.8,Hostel:4.1},
+    about:'Medical college and teaching hospital on the Coimbatore–Pollachi road, admitting 150 MBBS students a year through NEET counselling. Clinical training happens in the attached hospital, and postgraduate seats run under Dr. MGR Medical University.',
+    hl:[['Teaching hospital','Attached hospital for clinical postings from the second year'],
+        ['NEET route','MBBS seats through state and all-India NEET counselling'],
+        ['PG courses','MD programmes under Dr. MGR Medical University'],
+        ['Campus','Hostel, library and hospital on one road']],
+    courses:[
+      {n:'MBBS', seats:150, cut:[null,null,null], mark:'NEET-based counselling — state & all-India quota (sample)'},
+      {n:'MD General Medicine', seats:6, cut:[null,null,null], mark:'NEET-PG based counselling (sample)'},
+      {n:'MD Paediatrics', seats:4, cut:[null,null,null], mark:'NEET-PG based counselling (sample)'}
+    ],
+    place:[{y:2025,pct:100,avg:'₹9.0 LPA',high:'₹20 LPA'},{y:2024,pct:100,avg:'₹8.5 LPA',high:'₹18 LPA'},{y:2023,pct:100,avg:'₹8.0 LPA',high:'₹17 LPA'}],
+    recruiters:['Kovai Medical Center','Apollo','Fortis','Manipal','Kauvery'],
+    reviews:[
+      {n:'Dr. Hari N.',tag:'MBBS · Batch of 2023',r:4.5,
+       t:'Hospital patient load nalla irukku, so clinical exposure kammi illa. Faculty seniors rounds-la neraya kekkuvanga.',
+       p:'Good clinical exposure, supportive faculty',c:'Hostel is a walk from the hospital block'},
+      {n:'Sneha B.',tag:'MBBS · Batch of 2025',r:4.3,
+       t:'Campus is calm and the library is open late. NEET-PG coaching sessions happen in the final year.',
+       p:'Late library, PG coaching',c:'City is 12 km away'}
+    ],
+    qa:[
+      ['How do I get MBBS admission here?','MBBS seats are filled only through NEET — state counselling and the all-India quota. The college code is listed on the counselling portal.'],
+      ['Hostel available for MBBS students?','Yes — separate hostels close to the hospital block so night postings are easy.'],
+      ['Do you have PG courses?','Yes — MD programmes (General Medicine, Paediatrics and more) come through NEET-PG counselling.']
+    ]
+  },
+  {
+    id:'karpagampharm', grp:'karpagam', name:'Karpagam College of Pharmacy', short:'Karpagam Pharmacy', mono:'KARPA\nPHARM',
+    type:'Private · Pharmacy college', estd:2008, city:'Eachanari, Coimbatore',
+    naac:'NAAC A', nirf:'Recognised by PCI', approval:'Pharmacy Council of India · Dr. MGR Medical University',
+    fee:'₹50k – ₹1.1 L / year', seats:'100 seats / year', hostels:'Shared Karpagam hostels',
+    web:'https://karpagam.ac.in', rating:4.1,
+    cats:{Placements:4.1,Faculty:4.2,Infrastructure:4.1,'Campus life':4.0,'Fees value':4.1,Hostel:3.9},
+    about:'Pharmacy college on the Karpagam Eachanari campus, approved by the Pharmacy Council of India. B.Pharm, Pharm.D and M.Pharm students train in pharmaceutical analysis and formulation labs, with hospital and industry postings.',
+    hl:[['PCI approved','B.Pharm, Pharm.D and M.Pharm under Dr. MGR Medical University'],
+        ['Labs','Formulation, analysis and pharmacology labs on campus'],
+        ['Industry postings','Cipla, Sun Pharma and Aurobindo take interns'],
+        ['One campus','Shares the Eachanari campus with KAHE faculties']],
+    courses:[
+      {n:'B.Pharm', seats:100, cut:[null,null,null], mark:'Merit-based admission — Class 12 (PCM/PCB) marks (sample)'},
+      {n:'Pharm.D', seats:30, cut:[null,null,null], mark:'Merit-based admission — Class 12 marks (sample)'},
+      {n:'M.Pharm (Pharmaceutics)', seats:18, cut:[null,null,null], mark:'M.Pharm — GPAT / degree marks (sample)'},
+      {n:'M.Pharm (Pharmacology)', seats:15, cut:[null,null,null], mark:'M.Pharm — GPAT / degree marks (sample)'}
+    ],
+    place:[{y:2025,pct:86,avg:'₹3.6 LPA',high:'₹8 LPA'},{y:2024,pct:84,avg:'₹3.4 LPA',high:'₹7.5 LPA'},{y:2023,pct:82,avg:'₹3.2 LPA',high:'₹7 LPA'}],
+    recruiters:['Cipla','Sun Pharma','Aurobindo','Apollo Pharmacy','GSK'],
+    reviews:[
+      {n:'Mohammed I.',tag:'B.Pharm · Batch of 2024',r:4.2,
+       t:'Formulation lab-la hands-on work neraya kidaikkum. Third year-la hospital posting, final year-la industry internship.',
+       p:'Hands-on labs, hospital + industry postings',c:'Placement drives are fewer than engineering'},
+      {n:'Anitha G.',tag:'Pharm.D · Batch of 2025',r:4.0,
+       t:'Clinical pharmacy postings in the attached hospital are the highlight. Faculty guide the GPAT preparation well.',
+       p:'Clinical postings, GPAT guidance',c:'Campus transport stops early'}
+    ],
+    qa:[
+      ['How do I apply for B.Pharm?','B.Pharm and Pharm.D seats are filled on Class 12 (PCM/PCB) marks through the college portal — no entrance exam for the state quota.'],
+      ['Do you have Pharm.D?','Yes — a six-year Pharm.D with clinical postings in the hospital, plus M.Pharm in Pharmaceutics and Pharmacology.'],
+      ['Hostel facility irukka?','Yes — pharmacy students stay in the shared Karpagam hostels at Eachanari with mess and bus facilities.']
+    ]
+  },
+  {
+    id:'karpagamnurs', grp:'karpagam', name:'Karpagam College of Nursing', short:'Karpagam Nursing', mono:'KARPA\nNURSE',
+    type:'Private · Nursing college', estd:2006, city:'Eachanari, Coimbatore',
+    naac:'NAAC A', nirf:'Approved by TN Nurses & Midwives Council', approval:'TN Dr. MGR Medical University',
+    fee:'₹40k – ₹95k / year', seats:'100 seats / year', hostels:'Women’s hostel',
+    web:'https://karpagam.ac.in', rating:4.2,
+    cats:{Placements:4.4,Faculty:4.2,Infrastructure:4.1,'Campus life':4.0,'Fees value':4.2,Hostel:4.0},
+    about:'Nursing college running B.Sc., P.B.B.Sc. and M.Sc. Nursing programmes under Dr. MGR Medical University. Clinical training happens across the Karpagam hospital and partner hospitals, and overseas recruiters visit for the final-year batch.',
+    hl:[['Clinical training','Postings across Karpagam hospital and partner hospitals'],
+        ['Council approved','Recognised by the TN Nurses & Midwives Council'],
+        ['Overseas recruiters','Gulf and UK pathways for experienced nurses'],
+        ['Women’s hostel','Hostel inside the campus with mess and warden support']],
+    courses:[
+      {n:'B.Sc. Nursing', seats:100, cut:[null,null,null], mark:'Merit-based admission — Class 12 (PCB) marks (sample)'},
+      {n:'P.B.B.Sc. Nursing', seats:30, cut:[null,null,null], mark:'For registered nurses — merit based (sample)'},
+      {n:'M.Sc. Nursing', seats:25, cut:[null,null,null], mark:'M.Sc. Nursing — merit / entrance (sample)'}
+    ],
+    place:[{y:2025,pct:96,avg:'₹4.2 LPA',high:'₹8 LPA'},{y:2024,pct:94,avg:'₹4.0 LPA',high:'₹7.5 LPA'},{y:2023,pct:93,avg:'₹3.8 LPA',high:'₹7 LPA'}],
+    recruiters:['Kovai Medical Center','Kauvery','Manipal','Apollo','Overseas recruiters'],
+    reviews:[
+      {n:'Janani R.',tag:'B.Sc. Nursing · Batch of 2024',r:4.3,
+       t:'Hospital postings first year-lendhu irukku, so confidence quickly varum. Warden and faculty are strict about attendance, adhu nalladhukku.',
+       p:'Early hospital postings, disciplined hostel',c:'Evening outings need permission'},
+      {n:'Priya D.',tag:'M.Sc. Nursing · Batch of 2023',r:4.1,
+       t:'Research guidance is good — thesis work-ku faculty time kudukkuranga. Gulf recruiters came for the experienced batch.',
+       p:'Good research guidance, overseas recruiters',c:'Limited PG specialisations'}
+    ],
+    qa:[
+      ['How do I join B.Sc. Nursing?','B.Sc. Nursing seats are filled on Class 12 (Physics, Chemistry, Biology) marks through the college portal; there is no state entrance exam.'],
+      ['Hospital training epdi?','Clinical postings start early and run across the Karpagam hospital and partner hospitals through the course.'],
+      ['Hostel irukka?','Yes — a women’s hostel inside the campus with mess, warden and bus facilities.']
+    ]
+  }
+
+];
+
+/* --- location & contact (sample values, shown with a 'sample' tag) --- */
+var LOC = {
+  psg:       { addr:'PSG College of Technology, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 257 2177', mail:'admissions@psgtech.edu',   how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Bus stop at the campus gate' },
+  psgitech:  { addr:'PSG iTech, Neelambur, Avinashi Road, Coimbatore \u2013 641 062, Tamil Nadu', phone:'+91 422 257 2477', mail:'admissions@psgitech.ac.in', how:'Airport 3 km \u00b7 Railway station 14 km \u00b7 On the Avinashi Road highway' },
+  psgcas:    { addr:'PSG College of Arts & Science, Civil Aerodrome Post, Avinashi Road, Coimbatore \u2013 641 014, Tamil Nadu', phone:'+91 422 434 4000', mail:'admissions@psgcas.ac.in', how:'Airport 1 km \u00b7 Railway station 7 km \u00b7 Beside the old airport road' },
+  psgim:     { addr:'PSG Institute of Management, PB No. 1608, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 434 4777', mail:'admissions@psgim.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Inside the PSG Peelamedu campus' },
+  psgimsr:   { addr:'PSG Institute of Medical Sciences & Research, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 434 5600', mail:'admissions@psgimsr.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Hospital block on Avinashi Road' },
+  psgnursing:{ addr:'PSG College of Nursing, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 434 5610', mail:'admissions@psgnursing.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Beside the PSG hospitals' },
+  psgpharma: { addr:'PSG College of Pharmacy, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 434 5620', mail:'admissions@psgpharmacy.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 In the PSG medical campus' },
+  psgphysio: { addr:'PSG College of Physiotherapy, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 434 5630', mail:'admissions@psgphysiotherapy.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Near the PSG hospitals' },
+  psgpoly:   { addr:'PSG Polytechnic College, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 257 2645', mail:'admissions@psgpolytechnic.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Opposite the PSG Tech campus' },
+  psgias:    { addr:'PSG Institute of Advanced Studies, Peelamedu, Coimbatore \u2013 641 004, Tamil Nadu', phone:'+91 422 257 2107', mail:'admissions@psgias.ac.in', how:'Airport 5 km \u00b7 Railway station 8 km \u00b7 Inside the PSG Peelamedu campus' },
+  kahe:      { addr:'Karpagam Academy of Higher Education, Pollachi Main Road, Eachanari Post, Coimbatore – 641 021, Tamil Nadu', phone:'+91 422 298 0011', mail:'info@kahedu.edu.in', how:'Airport 12 km · Railway station 13 km · On the Pollachi main road, near the L&T bypass' },
+  kce:       { addr:'Karpagam College of Engineering, Myleripalayam Village, Othakkal Mandapam Post, Coimbatore – 641 032, Tamil Nadu', phone:'+91 422 261 9000', mail:'admissions@kce.ac.in', how:'Airport 18 km · Railway station 16 km · Coimbatore–Pollachi road' },
+  kit:       { addr:'Karpagam Institute of Technology, Seerapalayam, Coimbatore – 641 032, Tamil Nadu', phone:'+91 422 298 0011', mail:'admissions@karpagam.ac.in', how:'Airport 17 km · Railway station 15 km · Near the Karpagam Eachanari campus' },
+  kfmsr:     { addr:'Karpagam Faculty of Medical Sciences & Research, Othakkal Mandapam Post, Coimbatore – 641 032, Tamil Nadu', phone:'+91 422 261 9100', mail:'medical@karpagam.ac.in', how:'Airport 18 km · Railway station 16 km · Hospital block on the Pollachi road' },
+  karpagampharm: { addr:'Karpagam College of Pharmacy, Eachanari Post, Coimbatore – 641 021, Tamil Nadu', phone:'+91 422 298 0011', mail:'pharmacy@karpagam.ac.in', how:'Airport 12 km · Railway station 13 km · Inside the Karpagam Eachanari campus' },
+  karpagamnurs:  { addr:'Karpagam College of Nursing, Eachanari Post, Coimbatore – 641 021, Tamil Nadu', phone:'+91 422 298 0012', mail:'nursing@karpagam.ac.in', how:'Airport 12 km · Railway station 13 km · Beside the Karpagam hospital' }
+};
+
+/* ---------------------------------------------------------------- state ---- */
+var S = {
+  view:'login', id:null, tab:'overview', q:'', savedOnly:false, lvl:'ALL',
+  saved: [], user: null, chat: {}, typing: false, scrollChat: false,
+  profile: null, draft: {}, formErr: null, offline: false, busy: false, backend: null, grp: null
+};
+try { S.saved = JSON.parse(localStorage.getItem('pcc_saved') || '[]') || []; } catch (e) { S.saved = []; }
+try { S.user = JSON.parse(localStorage.getItem('pcc_user') || 'null'); } catch (e) { S.user = null; }
+try { S.chat = JSON.parse(localStorage.getItem('pcc_chat') || '{}') || {}; } catch (e) { S.chat = {}; }
+try { S.profile = JSON.parse(localStorage.getItem('pcc_profile') || 'null'); } catch (e) { S.profile = null; }
+try { S.offline = localStorage.getItem('pcc_offline') === '1'; } catch (e) {}
+/* Every visit starts at the login page. The details that were filled earlier
+   stay in localStorage only as an offline fallback — the real copy is in the
+   backend, so the next login brings the colleges straight away. */
+S.user = null;
+S.view = 'login';
+
+var DEMO = { email:'student@demo.edu', pw:'student123' };
+var BUILD = 'v4.1 · group pages';
+
+/* ---------------------------------------------------------------- backend ---
+   POST /api/login  -> {ok, profile|null}   (a new email creates the account)
+   POST /api/save   -> {ok, profile}        (stores the student details)
+   No server? Everything still works from this device (offline mode).      */
+function api(path, body) {
+  if (typeof fetch !== 'function') return Promise.reject(new Error('no fetch'));
+  return fetch(path, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(body || {}) })
+    .then(function (r) { return r.json(); });
+}
+function cutoffOf(p) {
+  var pct = parseFloat(p && p.marks12);
+  if (!isNaN(pct)) return Math.round(pct * 2 * 10) / 10;
+  var m = parseFloat(p && p.math), ph = parseFloat(p && p.phy), ch = parseFloat(p && p.chem);
+  if (isNaN(m) || isNaN(ph) || isNaN(ch)) return null;
+  return Math.round((m + ph / 2 + ch / 2) * 10) / 10;
+}
+function topCutOf(c) {
+  var best = null;
+  c.courses.forEach(function (x) { if (x.cut && x.cut[2] != null && (best == null || x.cut[2] > best)) best = x.cut[2]; });
+  return best;
+}
+function chanceOf(c) {
+  var cut = cutoffOf(S.profile), t = topCutOf(c);
+  if (cut == null || t == null) return null;
+  var d = cut - t;
+  if (d >= 3) return { k:'high', txt:'High chance' };
+  if (d >= -5) return { k:'mid', txt:'Borderline' };
+  return { k:'low', txt:'Tough' };
+}
+function nearMe(c) {
+  var town = String((S.profile && S.profile.town) || '').toLowerCase().trim();
+  if (town.length < 4) return false;
+  var first = town.split(/[ ,]/)[0];
+  if (first.length < 4) return false;
+  var hay = (String(c.city || '') + ' ' + String((LOC[c.id] || {}).addr || '')).toLowerCase();
+  return hay.indexOf(first) >= 0;
+}
+
+/* ------------------------------------------------------------ details form --- */
+function field(id, label, type, val, err, ph) {
+  return '<div class="f2"><label for="f_' + id + '">' + label + '</label>' +
+    '<input id="f_' + id + '" type="' + type + '" value="' + esc(val == null ? '' : val) + '" placeholder="' + esc(ph || '') + '"' +
+    (type === 'number' ? ' inputmode="decimal" step="0.1" min="0" max="100"' : '') +
+    (type === 'tel' ? ' inputmode="numeric" maxlength="10"' : '') + ' />' +
+    (err ? '<small class="ferr">' + esc(err) + '</small>' : '') + '</div>';
+}
+function segButtons(kind, opts, cur) {
+  return '<div class="seg">' + opts.map(function (o) {
+    return '<button type="button" class="seg__b' + (cur === o ? ' on' : '') + '" data-' + kind + '="' + esc(o) + '">' + esc(o) + '</button>';
+  }).join('') + '</div>';
+}
+function viewDetails() {
+  var d = S.draft || {}, e = S.formErr || {}, cut = cutoffOf(d);
+  return '' +
+  '<header class="top"><div class="wrap top__in">' +
+    '<span class="brand"><span class="brand__mark">PSG</span><span><b>PSG Campus Compass</b><small>Profile \u00b7 one-time register</small></span></span>' +
+    '<span class="spacer"></span>' +
+    '<button class="iconbtn" id="signout2" title="Sign out">\u21b3</button>' +
+  '</div></header>' +
+  '<main class="wrap">' +
+    '<div class="head"><h2>Profile \u2014 your details</h2><p><b>First time dhaan idhu:</b> 10 &amp; 12 marks, location, hostel illa day-scholar kuduthu <b>Save and submit</b> pannunga \u2014 appuram unga marks vachu colleges varum. <b>Next time</b> adhe email + password la login pannaa indha form thirumba varadhu: save aagirukira details-a vachu colleges direct-a display aagum.</p></div>' +
+    '<section class="card form">' +
+      '<div class="frow">' +
+        field('name', 'Full name', 'text', d.name, e.name, 'e.g. Karthik R.') +
+        field('phone', 'Phone number', 'tel', d.phone, e.phone, '10-digit mobile') +
+      '</div>' +
+      '<div class="frow">' +
+        field('marks10', 'Class 10 marks (%)', 'number', d.marks10, e.marks10, 'e.g. 94.9') +
+        field('marks12', 'Class 12 marks (%)', 'number', d.marks12, e.marks12, 'e.g. 95') +
+      '</div>' +
+      '<div class="frow">' +
+        field('town', 'Location (town / city)', 'text', d.town, e.town, 'e.g. Coimbatore') +
+      '</div>' +
+      '<h4 style="margin-top:6px">Staying <span class="mut" style="font-weight:600">\u00b7 day scholar illa hostel?</span></h4>' +
+      segButtons('stay', ['Day scholar', 'Hostel'], d.stay) +
+      (e.stay ? '<small class="ferr">' + esc(e.stay) + '</small>' : '') +
+      (d.stay === 'Hostel'
+        ? '<h4 style="margin-top:14px">Hostel</h4>' + segButtons('hostel', ['Boys hostel', 'Girls hostel'], d.hostelType) +
+          (e.hostelType ? '<small class="ferr">' + esc(e.hostelType) + '</small>' : '')
+        : d.stay === 'Day scholar'
+          ? '<h4 style="margin-top:14px">Travel</h4>' + segButtons('travel', ['College bus', 'Own vehicle', 'Not needed'], d.travel) +
+            (e.travel ? '<small class="ferr">' + esc(e.travel) + '</small>' : '')
+          : '') +
+      '<div class="formact">' +
+        '<button class="btn btn--navy" id="saveProfile">Save and submit</button>' +
+        '<button class="btn btn--ghost" id="skipProfile">Later</button>' +
+        '<span class="mut" style="font-size:11.9px">' + (S.offline ? 'Offline mode \u2014 this device la save aagum' : 'Details backend la save aagum') + '</span>' +
+      '</div>' +
+    '</section>' +
+  '</main>';
+}
+function collectForm() {
+  function v(id) { var el = document.getElementById('f_' + id); return el ? String(el.value || '').trim() : ''; }
+  var d = S.draft || {};
+  return {
+    name: v('name'), phone: v('phone'), marks10: v('marks10'), marks12: v('marks12'), town: v('town'),
+    stay: d.stay || '',
+    hostelType: d.stay === 'Hostel' ? (d.hostelType || '') : '',
+    travel: d.stay === 'Day scholar' ? (d.travel || '') : ''
+  };
+}
+function validateProfile(x) {
+  var e = {};
+  if (String(x.name || '').length < 2) e.name = 'Name type pannunga';
+  if (!/^[0-9]{10}$/.test(String(x.phone || ''))) e.phone = '10-digit mobile number';
+  ['marks10', 'marks12'].forEach(function (k) {
+    var n = parseFloat(x[k]);
+    if (String(x[k] || '') === '' || isNaN(n) || n < 0 || n > 100) e[k] = '0 \u2013 100 madhiri podunga';
+  });
+  if (String(x.town || '').length < 2) e.town = 'Town / city podunga';
+  if (!x.stay) e.stay = 'Day scholar illa Hostel select pannunga';
+  if (x.stay === 'Hostel' && !x.hostelType) e.hostelType = 'Boys / Girls hostel select pannunga';
+  if (x.stay === 'Day scholar' && !x.travel) e.travel = 'College bus / Own vehicle / Not needed';
+  return e;
+}
+function saveProfileNow() {
+  var x = collectForm();
+  var e = validateProfile(x);
+  S.draft = x;
+  if (Object.keys(e).length) { S.formErr = e; render(); toast('Konjam fields sari pannunga'); return; }
+  S.formErr = null;
+  S.profile = x;
+  save('pcc_profile', x);
+  if (!S.user) S.user = { email:'local', pw:'', name:x.name };
+  if (S.offline || typeof fetch !== 'function') {
+    S.offline = true; save('pcc_offline', '1');
+    S.view = 'list'; S.id = null; render(); toast('Saved on this device');
+    return;
+  }
+  api('/api/save', { email: S.user.email, pw: S.user.pw, profile: x }).then(function (res) {
+    if (res && res.ok && res.profile) { S.profile = Object.assign({}, x, res.profile); save('pcc_profile', S.profile); }
+    S.offline = !(res && res.ok);
+    save('pcc_offline', S.offline ? '1' : '0');
+    S.view = 'list'; S.id = null; render();
+    toast(res && res.ok ? 'Saved \u2713 backend la store aagirukku' : 'Saved on this device');
+  }).catch(function () {
+    S.offline = true; save('pcc_offline', '1');
+    S.view = 'list'; S.id = null; render(); toast('Saved on this device (server illa)');
+  });
+}
+function startSession(email, pw, profile, offline) {
+  S.grp = null; S.q = ''; S.savedOnly = false;
+  S.user = { email: email, pw: pw, name: (profile && profile.name) || '' };
+  S.profile = profile || null;
+  S.offline = !!offline;
+  save('pcc_offline', offline ? '1' : '0');
+  save('pcc_user', { email: email, name: S.user.name });
+  if (S.profile && S.profile.name) {
+    save('pcc_profile', S.profile);
+    S.view = 'list'; S.id = null; render();
+    toast('Welcome ' + (S.profile.name || email));
+  } else {
+    S.draft = S.draft || {};
+    S.formErr = null;
+    S.view = 'details'; render();
+    toast('Details fill panni save pannunga');
+  }
+}
+/* UG / PG tag: an explicit lvl wins, otherwise the programme name decides */
+function lvlOf(x) {
+  if (x.lvl) return x.lvl;
+  var n = String(x.n).toLowerCase();
+  return /^(m\.e\.|m\.tech|mba|m\.b\.a|mca|m\.c\.a|m\.sc|m\.com|m\.pharm|mpt|md\s|ms\s|phd|m\.arch|m\.s\.)/.test(n) ? 'PG' : 'UG';
+}
+function levelsOf(c) {
+  var out = { ALL: c.courses.length, UG: 0, PG: 0 };
+  c.courses.forEach(function (x) { out[lvlOf(x)]++; });
+  return out;
+}
+var app = document.getElementById('app');
+var toastEl = document.getElementById('toast');
+var toastT = null;
+
+function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+function toast(m) {
+  toastEl.textContent = m; toastEl.classList.add('on');
+  clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('on'); }, 2400);
+}
+function college(id) { for (var i=0;i<COLLEGES.length;i++) if (COLLEGES[i].id === id) return COLLEGES[i]; return null; }
+function initials(u) { return String(u.name||'PSG').split(/\s+/).map(function(w){return w[0];}).join('').slice(0,2).toUpperCase(); }
+function trendOf(cut) {
+  if (!cut || cut[0] == null) return { code:'flat', txt:'—', arrow:'·' };
+  var a = cut[cut.length-3], b = cut[cut.length-2], d = cut[cut.length-1];
+  if (d > b + .4) return { code:'up', txt:'rising', arrow:'↑' };
+  if (d < b - .4) return { code:'down', txt:'easing', arrow:'↓' };
+  return { code:'flat', txt:'steady', arrow:'→' };
+}
+function spark(cut) {
+  var vals = cut.filter(function (x) { return x != null; });
+  if (!vals.length) return '';
+  var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
+  return '<span class="spark" aria-hidden="true">' + vals.map(function (v) {
+    var h = max === min ? 10 : 5 + Math.round(((v - min) / (max - min)) * 9);
+    return '<i style="height:' + h + 'px"></i>';
+  }).join('') + '</span>';
+}
+function ratePill(r) { return '<span class="pill pill--rate">★ ' + r.toFixed(1) + '/5</span>'; }
+
+/* ---------------------------------------------------------------- views ---- */
+function viewLogin(alert) {
+  return '' +
+  '<header class="top"><div class="wrap top__in">' +
+    '<span class="brand"><span class="brand__mark">PSG</span><span><b>PSG Campus Compass</b><small>PSG + Karpagam institutions · one clean page</small></span></span>' +
+    '<span class="spacer"></span>' +
+  '</div></header>' +
+  '<main class="login"><form class="login__card" id="loginForm">' +
+    '<h1>Student sign in</h1>' +
+    '<p class="sub">One login for the PSG &amp; Karpagam groups \u2014 courses, three-year closing cutoffs, placements, student reviews and campus Q&amp;A.</p>' +
+    '<div class="f"><label for="em">Email</label><input id="em" type="email" autocomplete="email" placeholder="you@example.com" value="' + esc(DEMO.email) + '" /></div>' +
+    '<div class="f"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" placeholder="Your password" value="' + esc(DEMO.pw) + '" /></div>' +
+    (alert ? '<p class="legal" style="color:var(--bad);margin-top:12px">' + esc(alert) + '</p>' : '') +
+    '<button class="btn btn--navy btn--block" type="submit">Sign in</button>' +
+    '<div class="demo"><b>Demo account</b><code>' + esc(DEMO.email) + '<em>password ' + esc(DEMO.pw) + '</em></code>' +
+      '<button class="btn btn--ghost" type="button" id="demoFill">Use demo login</button></div>' +
+    '<p class="legal"><b>Flow:</b> first time login \u2192 <b>Profile</b> details (10 &amp; 12 marks, location, hostel / day-scholar) \u2192 Save and submit \u2192 colleges display. Next time adhe email + password podunga \u2014 <b>register thevai illa</b>, unga details-a vachu colleges direct-a display aagum. Demo site \u2014 accounts, fees, cutoffs, placements and reviews are sample values.</p>' +
+    ((function () {
+      var last = '';
+      try { last = (JSON.parse(localStorage.getItem('pcc_user') || 'null') || {}).email || ''; } catch (e) {}
+      return last ? '<p class="legal" style="margin-top:10px">This device la <b>' + esc(last) + '</b> details save aagirukku \u2014 adhe email + password podunga, details form thirumba varadhu (neradiya colleges).</p>' : '';
+    })()) +
+    '<p class="legal" style="margin-top:10px;font-weight:700">Build ' + BUILD + ' · ' +
+      (S.backend === null ? 'server-a check panren…' : (S.backend ? 'server connected ✓ (details backend la save aagum)' : 'server illa — offline demo (this device la save aagum)')) +
+    '</p>' +
+  '</form></main>';
+}
+
+function groupCard(g) {
+  var cs = inGrp(g.id);
+  var avg = cs.reduce(function (n, c) { return n + c.rating; }, 0) / (cs.length || 1);
+  return '<div class="gcard" data-grp="' + g.id + '" role="button" tabindex="0">' +
+    '<div class="gcard__t"><span class="gcard__badge">' + esc(g.badge) + '</span>' +
+    '<div><b>' + esc(g.name) + '</b><span class="mut">' + cs.length + ' campuses \u00b7 ' + esc(g.sub) + '</span></div></div>' +
+    '<p>' + esc(g.blurb) + '</p>' +
+    '<div class="gcard__f"><span class="pill pill--flat">\u2605 ' + avg.toFixed(1) + ' avg rating</span>' +
+      '<span class="pill pill--flat">' + cs.length + ' campuses</span><span class="spacer"></span>' +
+      '<span class="gcard__go">Open \u2192</span></div></div>';
+}
+
+function viewList() {
+  var q = S.q.trim().toLowerCase();
+  var pool = S.grp ? inGrp(S.grp) : COLLEGES;
+  var rows = pool.filter(function (c) {
+    if (S.savedOnly && S.saved.indexOf(c.id) < 0) return false;
+    if (!q) return true;
+    var hay = (c.name + ' ' + c.short + ' ' + c.type + ' ' + c.city + ' ' +
+      c.courses.map(function (x) { return x.n; }).join(' ')).toLowerCase();
+    return hay.indexOf(q) >= 0;
+  });
+  var hasCut = cutoffOf(S.profile) != null;
+  if (hasCut) {
+    var rank = { high:0, mid:1, low:2 };
+    rows = rows.slice().sort(function (a, b) {
+      var ca = chanceOf(a), cb = chanceOf(b);
+      var ra = ca ? rank[ca.k] : 3, rb = cb ? rank[cb.k] : 3;
+      if (ra !== rb) return ra - rb;
+      var na = nearMe(a) ? 0 : 1, nb = nearMe(b) ? 0 : 1;
+      if (na !== nb) return na - nb;
+      return b.rating - a.rating;
+    });
+  }
+  var pick = !S.grp && !q && !S.savedOnly;
+  var g = S.grp ? GROUPS.filter(function (x) { return x.id === S.grp; })[0] : null;
+  var tools = '<div class="tools">' +
+      '<label class="search">🔎<input id="q" type="search" placeholder="Search a campus or a course (e.g. nursing, MBA, CSE)" value="' + esc(S.q) + '" /></label>' +
+      '<button class="chip' + (S.savedOnly ? ' on' : '') + '" id="savedChip">\u2605 Saved <span class="cnt">' + S.saved.length + '</span></button>' +
+    '</div>';
+  var body;
+  if (pick) {
+    body = '<div class="head"><h2>Two groups, in one list</h2><p>' + (hasCut ? 'Sorted by your chance and your place. ' : '') +
+        'Pick a group to see its campuses \u2014 ' + inGrp('psg').length + ' PSG institutions and ' + inGrp('karpagam').length + ' Karpagam institutions in and around Coimbatore. Ratings, fees and cutoffs are sample values.</p></div>' +
+      '<div class="strip">' +
+        '<div><b>' + GROUPS.length + '</b><span>Groups</span></div>' +
+        '<div><b>' + COLLEGES.length + '</b><span>Campuses</span></div>' +
+        '<div><b>' + S.saved.length + '</b><span>Saved by you</span></div>' +
+      '</div>' +
+      tools +
+      '<div class="gcards">' + GROUPS.map(groupCard).join('') + '</div>';
+  } else {
+    var head = g
+      ? '<div class="head"><h2>' + esc(g.name) + '</h2><p>' + (hasCut ? 'Sorted by your chance and your place. ' : '') + esc(g.blurb) + '</p></div>'
+      : '<div class="head"><h2>' + (S.savedOnly ? 'Saved campuses' : 'Search results') + '</h2><p>' + rows.length + (rows.length === 1 ? ' campus' : ' campuses') +
+        (q ? ' match \u201c' + esc(S.q) + '\u201d' : '') + ' across both groups. Ratings, fees and cutoffs are sample values.</p></div>';
+    var avg2 = rows.reduce(function (n, c) { return n + c.rating; }, 0) / (rows.length || 1);
+    body = '<button class="back" id="allGroups">\u2190 All groups</button>' + head +
+      '<div class="strip">' +
+        '<div><b>' + rows.length + '</b><span>' + (g ? 'Campuses' : 'Matching') + '</span></div>' +
+        '<div><b>' + (rows.length ? avg2.toFixed(1) : '\u2014') + '</b><span>Average rating</span></div>' +
+        '<div><b>' + S.saved.length + '</b><span>Saved by you</span></div>' +
+      '</div>' + tools +
+      '<div class="list" id="list">' + (rows.length
+        ? (g ? rows.map(rowHTML).join('') : GROUPS.map(function (gg) {
+            var rs = rows.filter(function (c) { return grpOf(c) === gg.id; });
+            if (!rs.length) return '';
+            return '<section class="grp"><div class="grp__h"><h3>' + esc(gg.name) + '</h3>' +
+              '<span class="mut">' + rs.length + (rs.length === 1 ? ' campus' : ' campuses') + ' \u00b7 ' + esc(gg.sub) + '</span></div>' +
+              rs.map(rowHTML).join('') + '</section>';
+          }).join(''))
+        : '<div class="card"><b>No campus matches that search.</b><p class="mut" style="margin-top:6px">Try a course name like \u201cnursing\u201d or clear the search.</p></div>') + '</div>';
+  }
+  return '' +
+  '<header class="top"><div class="wrap top__in">' +
+    '<span class="brand"><span class="brand__mark">PSG</span><span><b>PSG Campus Compass</b><small>PSG + Karpagam institutions \u00b7 one clean page</small></span></span>' +
+    '<span class="spacer"></span>' +
+    '<button class="iconbtn" id="editProfile" title="Edit details (12th % / hostel)" aria-label="Edit details">\u270e</button>' +
+    '<button class="iconbtn" id="bell" title="Reminders" aria-label="Reminders">🔔<span class="dot"></span></button>' +
+    '<span class="userchip"><i>' + esc(initials(S.user || {name:'PSG'})) + '</i>' + esc((S.user && S.user.name) || 'PSG Student') + '</span>' +
+    '<button class="iconbtn" id="signout" title="Sign out" aria-label="Sign out">\u21cb</button>' +
+  '</div></header>' +
+  '<div class="panel" id="bellPanel"><h4>Reminders</h4><ul>' +
+    '<li><span>🔔</span><span><b>PSG Tech \u2014 management quota</b><span>Applications close 15 Apr 2027 \u00b7 in 183 days</span></span></li>' +
+    '<li><span>📅</span><span><b>Campus open house</b><span>24 Oct 2026, 9:30 AM \u00b7 Main Auditorium</span></span></li>' +
+    '<li><span>📄</span><span><b>Keep documents ready</b><span>Class 10 &amp; 12 marksheets, TC, community certificate</span></span></li>' +
+  '</ul></div>' +
+  '<main class="wrap">' +
+    (S.offline ? '<p class="mut" style="font-size:11.8px;margin:-6px 0 12px">Server illa \u2014 details this device la mattum save aagirukku.</p>' : '') +
+    body +
+    '<footer class="foot"><span>PSG Campus Compass \u00b7 a demo guide \u00b7 values are indicative</span><span>Build ' + BUILD + ' \u00b7 details backend la save aagum</span></footer>' +
+  '</main>';
+}
+
+function rowHTML(c) {
+  var savedOn = S.saved.indexOf(c.id) >= 0;
+  var top = c.courses[0];
+  var tr = top ? trendOf(top.cut) : null;
+  return '' +
+  '<div class="row" data-open="' + c.id + '" role="button" tabindex="0">' +
+    '<span class="row__mark">' + esc(c.mono).replace('\n', '<br>') + '</span>' +
+    '<span class="row__t">' +
+      '<b>' + esc(c.name) + '</b>' +
+      '<span class="meta">' + esc(c.city) + ' · ' + esc(c.type) + ' · est. ' + c.estd + '</span>' +
+      '<span class="row__pills">' +
+        (function () { var ch = chanceOf(c); return ch ? '<span class="pill pill--' + ch.k + '">' + ch.txt + '</span>' : ''; })() +
+        (nearMe(c) ? '<span class="pill pill--near">Near your place</span>' : '') +
+        ratePill(c.rating) +
+        '<span class="pill pill--fee">' + esc(c.fee) + '</span>' +
+        (top && top.cut[2] != null ? '<span class="pill pill--' + tr.code + '">' + esc(top.n.replace(/^(B\.E\.|B\.Tech|B\.Sc\.)\s*/, '')) + ' cutoff ' + tr.arrow + ' ' + top.cut[2] + '</span>' : '') +
+      '</span>' +
+    '</span>' +
+    '<span class="row__side">' +
+      '<button class="star' + (savedOn ? ' on' : '') + '" data-save="' + c.id + '" title="' + (savedOn ? 'Remove from saved' : 'Save this campus') + '" aria-label="Save">' + (savedOn ? '★' : '☆') + '</button>' +
+    '</span>' +
+  '</div>';
+}
+
+function viewDetail(c) {
+  var savedOn = S.saved.indexOf(c.id) >= 0;
+  var tabs = [['overview','Overview'],['courses','Courses & cutoff'],['placements','Placements'],['location','Location'],['reviews','Reviews'],['qa','Q & A']];
+  return '' +
+  '<header class="top"><div class="wrap top__in">' +
+    '<span class="brand"><span class="brand__mark">PSG</span><span><b>PSG Campus Compass</b><small>PSG + Karpagam institutions · one clean page</small></span></span>' +
+    '<span class="spacer"></span>' +
+    '<span class="userchip"><i>' + esc(initials(S.user || {name:'PSG'})) + '</i>' + esc((S.user && S.user.name) || 'PSG Student') + '</span>' +
+  '</div></header>' +
+  '<main class="wrap">' +
+    '<button class="back" id="back">← All ten campuses</button>' +
+    '<button class="back" id="editProfile" style="margin-left:8px">✎ Edit details</button>' +
+    '<section class="hero">' +
+      '<div class="hero__top">' +
+        '<div style="min-width:0">' +
+          '<h2>' + esc(c.name) + '</h2>' +
+          '<p class="tag">' + esc(c.about) + '</p>' +
+          '<div class="hero__chips">' +
+            '<span>' + esc(c.type) + '</span><span>Est. ' + c.estd + '</span><span>' + esc(c.naac) + '</span>' +
+            '<span>' + esc(c.nirf) + '</span><span>' + esc(c.approval) + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="hero__side">' +
+          '<span class="hero__act">' +
+            '<button class="btn btn--gold" data-save="' + c.id + '">' + (savedOn ? '★ Saved' : '☆ Save campus') + '</button>' +
+            '<a class="btn btn--ghost" href="' + esc(c.web) + '" target="_blank" rel="noopener noreferrer">Official website ↗</a>' +
+          '</span>' +
+        '</div>' +
+      '</div>' +
+    '</section>' +
+    '<div class="tabs">' + tabs.map(function (t) {
+      return '<button class="tab' + (S.tab === t[0] ? ' on' : '') + '" data-tab="' + t[0] + '">' + esc(t[1]) + '</button>';
+    }).join('') + '</div>' +
+    (S.tab === 'overview' ? tabOverview(c) :
+     S.tab === 'courses' ? tabCourses(c) :
+     S.tab === 'placements' ? tabPlacements(c) :
+     S.tab === 'location' ? tabLocation(c) :
+     S.tab === 'reviews' ? tabReviews(c) : tabQA(c)) +
+    '<footer class="foot"><span>Sample values for a demo — confirm with the college</span><span>' + esc(c.short) + '</span></footer>' +
+  '</main>';
+}
+
+function tabOverview(c) {
+  return '' +
+  '<div class="grid2">' +
+    '<section class="card">' +
+      '<h4>Quick facts</h4>' +
+      '<div class="kv">' +
+        '<div><span>Programmes</span><b>' + c.courses.length + ' listed</b></div>' +
+        '<div><span>Fee range</span><b>' + esc(c.fee) + '</b></div>' +
+        '<div><span>Seats</span><b>' + esc(c.seats) + '</b></div>' +
+        '<div><span>Hostel</span><b>' + esc(c.hostels) + '</b></div>' +
+        '<div><span>Rating</span><b>★ ' + c.rating.toFixed(1) + '/5</b></div>' +
+      '</div>' +
+      '<h4 style="margin-top:16px">What stands out</h4>' +
+      '<div class="hl">' + c.hl.map(function (h) {
+        return '<div><b>' + esc(h[0]) + '</b><span>' + esc(h[1]) + '</span></div>';
+      }).join('') + '</div>' +
+    '</section>' +
+    '<section class="card">' +
+      '<h4>Recruiters seen on campus <span class="mut" style="font-weight:600">\u00b7 ' + c.recruiters.length + ' logos, left \u2192 right</span></h4>' +
+      recruiterStrip(c) +
+      '<p class="mut" style="margin-top:8px;font-size:11.8px">Tiles run with each brand\u2019s own logo mark \u2014 monogram fallback when a logo cannot load. Demo use only.</p>' +
+      '<h4 style="margin-top:16px">Fee snapshot</h4>' +
+      '<p class="mut" style="font-size:12.6px">' + esc(c.fee) + '. Government-quota seats cost far less than management quota; the offer letter states your slab.</p>' +
+      '<h4 style="margin-top:16px">Next step</h4>' +
+      '<p class="mut" style="font-size:12.6px">Open the courses tab to see the closing cutoff of the last three years, then check the Q&amp;A tab for hostel and document questions.</p>' +
+    '</section>' +
+  '</div>';
+}
+
+function tabCourses(c) {
+  var counts = levelsOf(c);
+  var sel = (S.lvl === 'UG' || S.lvl === 'PG') && counts[S.lvl] ? S.lvl : 'ALL';
+  var rows = c.courses.filter(function (x) { return sel === 'ALL' || lvlOf(x) === sel; });
+  var tnea = rows.some(function (x) { return x.cut[0] != null; });
+  var seg = ['ALL', 'UG', 'PG'].map(function (k) {
+    var lbl = k === 'ALL' ? 'All courses' : k;
+    var off = counts[k] ? '' : ' disabled';
+    return '<button class="seg__b' + (sel === k ? ' on' : '') + '" data-lvl="' + k + '"' + off + '>' +
+      lbl + ' <span class="seg__n">' + counts[k] + '</span></button>';
+  }).join('');
+  return '' +
+  '<section class="card">' +
+    '<div class="segrow">' +
+      '<div class="seg">' + seg + '</div>' +
+      '<span class="mut segrow__hint">' + (sel === 'ALL' ? 'Every programme listed for this campus' : sel + ' programmes only') + '</span>' +
+    '</div>' +
+    '<h4>' + (sel === 'ALL' ? '' : sel + ' \u00b7 ') + (tnea ? 'Closing cutoff, last three years (out of 200)' : 'How seats are filled') + '</h4>' +
+    '<table class="tbl"><thead><tr><th>Programme</th><th class="num">Seats</th>' +
+      (tnea ? '<th class="num">2024</th><th class="num">2025</th><th class="num">2026</th><th>Trend</th>' : '<th>Selection</th>') +
+    '</tr></thead><tbody>' +
+    rows.map(function (x) {
+      var tr = trendOf(x.cut);
+      return '<tr><td><b>' + esc(x.n) + '</b>' + (sel === 'ALL' ? ' <i class="lvll lvll--' + lvlOf(x).toLowerCase() + '">' + lvlOf(x) + '</i>' : '') + '</td><td class="num">' + (x.seats == null ? '—' : x.seats) + '</td>' +
+        (tnea
+          ? '<td class="num">' + (x.cut[0] == null ? '—' : x.cut[0].toFixed(1)) + '</td>' +
+            '<td class="num">' + (x.cut[1] == null ? '—' : x.cut[1].toFixed(1)) + '</td>' +
+            '<td class="num">' + (x.cut[2] == null ? '—' : x.cut[2].toFixed(1)) + '</td>' +
+            '<td><span class="trend">' + spark(x.cut) + ' <span class="pill pill--' + tr.code + '">' + tr.arrow + ' ' + tr.txt + '</span></span></td>'
+          : '<td class="mut">' + esc(x.mark || '—') + '</td>') +
+      '</tr>';
+    }).join('') +
+    '</tbody></table>' +
+    '<p class="mut" style="margin-top:10px;font-size:12.2px">' +
+      (rows.length
+        ? (tnea
+            ? 'Cutoff = Maths + Physics/2 + Chemistry/2 (UG, TNEA). PG programmes are filled on TANCET / GATE or degree marks. Sample values for this demo.'
+            : 'These programmes do not run on a TNEA cutoff — the selection column shows what the college actually uses. Sample values.')
+        : 'No ' + sel + ' programme is listed for this campus in this demo data.') +
+    '</p>' +
+  '</section>';
+}
+
+var LOGO_DOMAIN = {
+  "Bosch": "bosch.com",
+  "TCS": "tcs.com",
+  "Zoho": "zoho.com",
+  "Deloitte": "deloitte.com",
+  "Qualcomm": "qualcomm.com",
+  "Caterpillar": "cat.com",
+  "L&T": "larsentoubro.com",
+  "Hyundai": "hyundai.com",
+  "Infosys": "infosys.com",
+  "Wipro": "wipro.com",
+  "Sutherland": "sutherlandglobal.com",
+  "ICICI": "icicibank.com",
+  "ICICI Bank": "icicibank.com",
+  "Kotak": "kotak.com",
+  "Cognizant": "cognizant.com",
+  "HDFC Bank": "hdfcbank.com",
+  "Asian Paints": "asianpaints.com",
+  "Apollo": "apollohospitals.com",
+  "Apollo Pharmacy": "apollopharmacy.in",
+  "Fortis": "fortishealthcare.com",
+  "Kovai Medical Center": "kmchhospitals.com",
+  "Kauvery": "kauveryhospital.com",
+  "Manipal": "manipalhospitals.com",
+  "Cipla": "cipla.com",
+  "Sun Pharma": "sunpharma.com",
+  "Aurobindo": "aurobindo.com",
+  "GSK": "gsk.com",
+  "TVS": "tvsmotor.com",
+  "Pricol": "pricol.com",
+  "Lakshmi Machine Works": "lmw.co.in",
+  "PSG Hospitals": "psghospitals.com",
+  "Roots Industries": "rootsindia.com"
+};
+function logoColor(name) {
+  var pal = ['#1f3a6e', '#8a4b1f', '#1d6b5a', '#6b1f3a', '#2b5e2b', '#3d2b6e'];
+  var h = 0;
+  for (var i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) % 997;
+  return pal[h % pal.length];
+}
+function monogram(name) {
+  var w = String(name).replace(/[^A-Za-z ]/g, ' ').trim().split(/\s+/);
+  if (w.length > 1) return (w[0].charAt(0) + w[1].charAt(0)).toUpperCase();
+  return String(w[0] || '?').slice(0, 2).toUpperCase();
+}
+function logoFallback(img) {
+  var dom = img.getAttribute('data-dom');
+  if (img.getAttribute('data-try') !== '1') {
+    img.setAttribute('data-try', '1');
+    img.src = 'https://icons.duckduckgo.com/ip3/' + dom + '.ico';
+    return;
+  }
+  var i = img.parentNode;
+  i.className = '';
+  i.style.background = logoColor(img.getAttribute('data-name'));
+  i.textContent = img.getAttribute('data-mono');
+}
+function recruiterTile(r) {
+  var dom = LOGO_DOMAIN[r];
+  var mono = monogram(r);
+  if (!dom) {
+    return '<span class="lg"><i style="background:' + logoColor(r) + '">' + esc(mono) + '</i><b>' + esc(r) + '</b></span>';
+  }
+  return '<span class="lg"><i class="lg__i">' +
+      '<img src="https://www.google.com/s2/favicons?domain=' + esc(dom) + '&amp;sz=128" alt="' + esc(r) + ' logo"' +
+      ' data-dom="' + esc(dom) + '" data-name="' + esc(r) + '" data-mono="' + esc(mono) + '"' +
+      ' loading="lazy" referrerpolicy="no-referrer" onerror="logoFallback(this)" />' +
+    '</i><b>' + esc(r) + '</b></span>';
+}
+function recruiterStrip(c) {
+  var one = c.recruiters.map(recruiterTile).join('');
+  return '<div class="mq" role="group" aria-label="Top recruiters: ' + esc(c.recruiters.join(', ')) + '">' +
+    '<div class="mq__track">' + one + one + '</div>' +
+  '</div>';
+}
+
+function tabPlacements(c) {
+  var any = c.place.some(function (p) { return p.pct != null; });
+  return '' +
+  '<div class="grid2">' +
+    '<section class="card">' +
+      '<h4>Year by year</h4>' +
+      (any
+        ? '<table class="tbl"><thead><tr><th>Year</th><th class="num">Placed</th><th class="num">Average</th><th class="num">Highest</th></tr></thead><tbody>' +
+          c.place.map(function (p) {
+            return '<tr><td><b>' + p.y + '</b></td><td class="num">' + (p.pct == null ? '—' : p.pct + '%') + '</td>' +
+              '<td class="num">' + esc(p.avg) + '</td><td class="num">' + esc(p.high) + '</td></tr>';
+          }).join('') + '</tbody></table>'
+        : '<p class="mut" style="font-size:13px">Placement figures are not published for this institute — scholars usually move into academia and R&amp;D roles.</p>') +
+      '<p class="mut" style="margin-top:10px;font-size:12.2px">Figures as published by the college; sample values for this demo.</p>' +
+    '</section>' +
+    '<section class="card">' +
+      '<h4>Top recruiters <span class="mut" style="font-weight:600">\u00b7 ' + c.recruiters.length + ' on campus (demo logos)</span></h4>' +
+      recruiterStrip(c) +
+      '<p class="mut" style="margin-top:8px;font-size:11.8px">Tiles run with each brand\u2019s own logo mark, loaded live from the company. No internet? Generic recruiters and blocked logos fall back to a monogram \u2014 demo use only.</p>' +
+      '<h4 style="margin-top:16px">Good to know</h4>' +
+      '<div class="hl">' +
+        '<div><b>Drives run in the final year</b><span>Internships and project semesters start earlier</span></div>' +
+        '<div><b>Ask your department</b><span>Each department keeps its own placement record</span></div>' +
+      '</div>' +
+    '</section>' +
+  '</div>';
+}
+
+/* ------------------------------------------------------------ assistant ---- */
+function norm(s) {
+  return String(s == null ? '' : s).toLowerCase()
+    .replace(/[^a-z0-9\s\u0b80-\u0bff]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function hasAny(q, words) { for (var i = 0; i < words.length; i++) if (q.indexOf(words[i]) >= 0) return true; return false; }
+var GROUPS = [
+  { id:'psg', name:'PSG Institutions', badge:'PSG', sub:'PSG & Sons’ Charities · Peelamedu & Neelambur',
+    blurb:'Engineering, arts & science, management, medicine, nursing, pharmacy, physiotherapy, polytechnic and advanced studies — the 10 PSG campuses in and around Coimbatore.' },
+  { id:'karpagam', name:'Karpagam Institutions', badge:'KARPA', sub:'Karpagam Charity Trust · Eachanari & Othakkal Mandapam',
+    blurb:'Engineering, deemed university, medical, pharmacy and nursing campuses — the 6 Karpagam institutions on the Coimbatore–Pollachi road.' }
+];
+
+function grpOf(c) { return c.grp || 'psg'; }
+function inGrp(g) { return COLLEGES.filter(function (c) { return grpOf(c) === g; }); }
+var GROUP = {
+  intro: 'The PSG group is run by PSG & Sons\u2019 Charities and runs <b>10 campuses</b> in and around Coimbatore \u2014 engineering, arts &amp; science, management, medicine, nursing, pharmacy, physiotherapy, polytechnic and advanced studies. PSG CAS (1947) and PSG Tech (1951) are the oldest; PSG iTech (2015) is the newest.',
+  admit: 'One pattern runs across the group: <b>TNEA counselling</b> for engineering and arts &amp; science seats, <b>NEET-based counselling</b> for the medical campuses (MBBS, nursing, pharmacy, physiotherapy), and <b>management-quota</b> applications on each campus portal after the rank list. Every campus has its own TNEA/NEET code \u2014 check the official portal for the current code.',
+  docs: 'Class 10 &amp; 12 marksheets, transfer certificate, community / nativity certificate, entrance scorecard if any, Aadhaar and 4 passport photos \u2014 originals plus two copies.',
+  k_intro: 'The <b>Karpagam group</b> runs <b>6 campuses</b> at Eachanari and Othakkal Mandapam on the Coimbatore\u2013Pollachi road \u2014 engineering, arts &amp; science, management, medicine, pharmacy and nursing. Karpagam College of Engineering (2000) is the oldest; the medical faculty (2014) is the newest.'
+};
+var DOMAIN = [
+  { k:['mbbs','medicine','medical','doctor','neet','hospital'], id:'psgimsr', what:'MBBS & medical courses' },
+  { k:['nursing','nurse'], id:'psgnursing', what:'nursing (B.Sc. Nursing, P.B.B.Sc.)' },
+  { k:['pharmacy','pharm'], id:'psgpharma', what:'pharmacy (B.Pharm / Pharm.D)' },
+  { k:['physio','physiotherapy','bpt'], id:'psgphysio', what:'physiotherapy (BPT / MPT)' },
+  { k:['mba','management studies','business administration','bba'], id:'psgim', what:'management (MBA / BBA)' },
+  { k:['polytechnic','diploma'], id:'psgpoly', what:'polytechnic diplomas' },
+  { k:['arts','commerce','b com','bcom','b sc','bsc','microbiology','biotech'], id:'psgcas', what:'arts & science degrees' },
+  { k:['phd','research','advanced studies'], id:'psgias', what:'research & advanced studies' },
+  { k:['b tech','btech','engineering','cse','ece','mech','civil','aids'], id:'psg', what:'engineering (B.E. / B.Tech)' }
+];
+function campusInQuestion(q) {
+  var best = null, bestScore = 0;
+  COLLEGES.forEach(function (x) {
+    var shortP = norm(x.short), nameP = norm(x.name);
+    var score = 0;
+    if (nameP.length > 6 && q.indexOf(nameP) >= 0) score = 1000 + nameP.length;
+    else if (shortP.length > 3 && q.indexOf(shortP) >= 0) score = 500 + shortP.length;
+    else {
+      var sw = shortP.split(' ').filter(function (w) { return w.length > 2; });
+      var nw = nameP.split(' ').filter(function (w) { return w.length > 3; });
+      var hs = 0, hn = 0;
+      sw.forEach(function (w) { if (q.indexOf(w) >= 0) hs++; });
+      nw.forEach(function (w) { if (q.indexOf(w) >= 0) hn++; });
+      if (hn >= 2 || (hs >= 1 && hn >= 1) || hs >= 2) score = 100 + hn * 2 + hs;
+    }
+    if (score > bestScore) { bestScore = score; best = x; }
+  });
+  return best;
+}
+function domainFor(q) {
+  var found = null;
+  DOMAIN.forEach(function (d) {
+    d.k.forEach(function (k) { if (q.indexOf(k) >= 0) found = d; });
+  });
+  return found;
+}
+function avgOf(c) {
+  var v = parseFloat(String(c.place[0].avg).replace(/[^0-9.]/g, ''));
+  return isNaN(v) ? 0 : v;
+}
+function campusLine(c) {
+  return '<li><b>' + esc(c.short) + '</b> \u2014 ' + esc(c.type.split(' \u00b7 ')[0]) + ' \u00b7 \u2605 ' + c.rating.toFixed(1) + ' \u00b7 avg ' + esc(c.place[0].avg) + ' \u00b7 ' + esc(c.fee) + '</li>';
+}
+function groupAnswer(q) {
+  if (hasAny(q, ['how many college', 'how many campus', '10 college', 'list of psg', 'ella campus', 'ellame campus', 'evlo campus', 'which colleges', 'which karpagam', 'karpagam college',
+      'enna college', 'enna campus', 'list of karpagam'])) {
+    var kar = hasAny(q, ['karpagam']);
+    var pick = inGrp(kar ? 'karpagam' : 'psg');
+    return { text: '<b>' + (kar ? 'Karpagam' : 'PSG') + ' group \u2014 ' + pick.length + ' campuses (sample):</b><ul class="botlist">' + pick.map(campusLine).join('') + '</ul>' +
+        (kar ? '' : 'Karpagam group la innum ' + inGrp('karpagam').length + ' campuses irukku \u2014 list page la rendu group-a paakkalam.'),
+      chips: ['Which college for MBA?', 'Which college for MBBS?', 'Group placement epdi?'] };
+  }
+  if (hasAny(q, ['history', 'charities', 'oldest', 'group pathi', 'about psg', 'psg group', 'started', 'about karpagam', 'karpagam group'])) {
+    return { text: hasAny(q, ['karpagam']) ? GROUP.k_intro : GROUP.intro, chips: ['How many campuses?', 'Which college for CSE?', 'Admission process?'] };
+  }
+  if (hasAny(q, ['total seat', 'seats in total', 'overall seat', 'ella seat'])) {
+    var total = 0;
+    COLLEGES.forEach(function (c) { c.courses.forEach(function (x) { total += x.seats || 0; }); });
+    return { text: '<b>Listed seats across the ' + COLLEGES.length + ' campuses shown here:</b> ' + total + ' (sample \u2014 only the programmes listed on this page).', chips: ['Which college for CSE?', 'Fees evlo?', 'Hostel irukka?'] };
+  }
+  if (hasAny(q, ['group placement', 'psg placement', 'overall placement', 'best placement'])) {
+    var sorted = COLLEGES.slice().sort(function (a, b) { return avgOf(b) - avgOf(a); });
+    return { text: '<b>Placement strength across the group (sample):</b><ul class="botlist">' + sorted.slice(0, 4).map(function (c) {
+        return '<li><b>' + esc(c.short) + '</b> \u2014 avg ' + esc(c.place[0].avg) + ' \u00b7 ' + c.place[0].pct + '% placed (' + c.place[0].y + ')</li>';
+      }).join('') + '</ul>Medical campuses report near-100% internship placement; the engineering and management campuses report the numbers above.',
+      chips: ['PSG Tech placement?', 'PSG IM placement?', 'Which college for CSE?'] };
+  }
+  var d = domainFor(q);
+  var asking = hasAny(q, ['which', 'enga', 'where', 'best college', 'suggest', 'edu college', 'edhu college', 'padikka', 'join panna', 'course']);
+  if (d && asking) {
+    var target = college(d.id);
+    if (target) {
+      var top = target.courses[0];
+      return { text: '<b>' + esc(d.what) + '</b> \u2014 idhu <b>' + esc(target.name) + '</b> la irukku (sample).<ul class="botlist">' +
+          '<li>' + esc(target.type) + ' \u00b7 est. ' + target.estd + ' \u00b7 ' + esc(target.naac) + '</li>' +
+          '<li>Fee ' + esc(target.fee) + ' \u00b7 ' + esc(target.seats) + '</li>' +
+          '<li>' + esc(top.n) + (top.cut[2] != null ? ' cut-off ' + top.cut[2] + ' (2026)' : '') + ' \u00b7 avg ' + esc(target.place[0].avg) + '</li>' +
+        '</ul>Their page is in this list \u2014 open <b>' + esc(target.short) + '</b> for the three-year cutoff and placement tables.',
+        chips: [target.short + ' fees?', target.short + ' cutoff?', target.short + ' placement?'] };
+    }
+  }
+  if (hasAny(q, ['best', 'compare', 'vs', 'better'])) {
+    var rows = [];
+    COLLEGES.forEach(function (c) {
+      var cr = findCourse(c, q);
+      if (cr && cr.cut[2] != null) rows.push({ c: c, cr: cr });
+    });
+    rows.sort(function (a, b) { return b.cr.cut[2] - a.cr.cut[2]; });
+    if (rows.length > 1) {
+      return { text: '<b>Same branch across the group (sample, 2026 closing cutoff):</b><ul class="botlist">' + rows.map(function (r) {
+          return '<li><b>' + esc(r.c.short) + '</b> \u2014 ' + esc(r.cr.n) + ': ' + r.cr.cut[2] + ' \u00b7 avg ' + esc(r.c.place[0].avg) + '</li>';
+        }).join('') + '</ul>Higher cutoff = harder to get in. Weigh the fee and the location too \u2014 cutoff alone is not the whole story.',
+        chips: ['Fees compare', 'Which college for CSE?', 'Hostel irukka?'] };
+    }
+  }
+  return null;
+}
+function curatedMatch(c, q) {
+  var words = q.split(' ').filter(function (w) { return w.length > 2; });
+  var best = null, hitBest = 0, total = 0;
+  c.qa.forEach(function (x) {
+    var qw = norm(x[0]).split(' ').filter(function (w) { return w.length > 2; });
+    var hit = 0;
+    qw.forEach(function (w) { if (words.indexOf(w) >= 0) hit++; });
+    if (hit > hitBest) { hitBest = hit; best = x; total = qw.length; }
+  });
+  return { pair: best, hit: hitBest, total: total, strong: (best && hitBest >= 2 && hitBest >= Math.ceil(total * 0.6)) };
+}
+function findCourse(c, q) {
+  var best = null, bestScore = 0;
+  c.courses.forEach(function (x) {
+    var words = norm(x.n).split(' ');
+    var score = 0;
+    words.forEach(function (w) { if (w.length > 1 && q.indexOf(w) >= 0) score++; });
+    if (hasAny(q, ['cse', 'computer']) && /computer/i.test(x.n)) score += 2;
+    if (hasAny(q, ['it', 'information']) && /information/i.test(x.n)) score += 2;
+    if (q.indexOf('ece') >= 0 && /electronics/i.test(x.n)) score += 2;
+    if (q.indexOf('mech') >= 0 && /mechanical/i.test(x.n)) score += 2;
+    if (q.indexOf('civil') >= 0 && /civil/i.test(x.n)) score += 2;
+    if (q.indexOf('aids') >= 0 && /(ai|artificial)/i.test(x.n)) score += 2;
+    if (score > bestScore) { bestScore = score; best = x; }
+  });
+  return bestScore > 0 ? best : null;
+}
+function cutLine(cr, cut) {
+  return esc(cr.n) + ' — ' + cut[0] + ' (2024) → ' + cut[1] + ' (2025) → ' + cut[2] + ' (2026)';
+}
+function courseTable(c) {
+  return '<ul class="botlist">' + c.courses.map(function (x) {
+    return '<li><b>' + esc(x.n) + '</b> · ' + x.seats + ' seats · cutoff ' + (x.cut[2] != null ? x.cut[2] : '—') + ' (2026)</li>';
+  }).join('') + '</ul>';
+}
+var CHIPS = {
+  fee: ['Hostel fee evlo?', 'Scholarship irukka?', 'Seats ethana?'],
+  hostel: ['Hostel rules?', 'Fees evlo?', 'Getting there?'],
+  place: ['Top recruiters?', 'Highest package?', 'CSE cutoff?'],
+  cut: ['Seats ethana?', 'Management quota?', 'Documents enna venum?'],
+  loc: ['Bus route irukka?', 'Hostel irukka?', 'Campus phone number?'],
+  adm: ['Documents enna venum?', 'Management quota?', 'Fees evlo?'],
+  gen: ['CSE cutoff?', 'Placement epdi?', 'Hostel irukka?']
+};
+function botAnswer(c, raw) {
+  var q = norm(raw);
+  // group questions ("evlo campus", "karpagam la enna colleges") -> group answer,
+  // not a single campus, even when a campus name appears in the question
+  if (hasAny(q, ['how many college', 'how many campus', 'evlo campus', 'ella campus', 'ellame campus',
+                 'which colleges', 'list of psg', 'list of karpagam', 'enna college', 'enna campus'])) {
+    var gq = groupAnswer(q);
+    if (gq) return gq;
+  }
+  var mentioned = campusInQuestion(q);
+  if (mentioned && mentioned.id !== c.id) c = mentioned;
+  var L = LOC[c.id] || {}, p = c.place[0];
+  var cm = curatedMatch(c, q);
+  if (cm.strong) return { text: '<b>' + esc(cm.pair[0]) + '</b><br>' + esc(cm.pair[1]) +
+      '<br><span class="mut">From this campus\u2019s own sample Q&amp;A \u2014 rules and dates change every year.</span>', chips: CHIPS.adm };
+  var g = groupAnswer(q);
+  if (g) return g;
+  var fee = '<b>' + esc(c.short) + ' fees:</b> ' + esc(c.fee) + ' (sample). Government-quota seats under TNEA cost far less than management quota — your offer letter states the slab. Hostel and mess are billed separately.';
+  var seat = '<b>' + esc(c.short) + ' seats:</b> ' + c.courses.map(function (x) { return esc(x.n.replace(/^(B\.E\.|B\.Tech|B\.Sc\.|M\.B\.B\.S|M\.B\.A)\s*/, '')) + ' ' + x.seats; }).join(' · ') + '. Total campus strength: ' + esc(c.seats) + ' (sample).';
+
+  // hostel first: it owns "hostel", even when the user also says "fee"/"evlo"
+  if (hasAny(q, ['hostel', 'room', 'mess', 'saapadu', 'stay'])) {
+    return { text: '<b>Hostel:</b> ' + esc(c.hostels) + ' at ' + esc(c.short) + ' (sample). Mess is included in the hostel bill; apply right after admission — rooms fill before the semester starts. ' + (hasAny(q, ['fee', 'fees', 'evlo', 'cost', 'amount']) ? 'Hostel + mess usually runs ₹45k – ₹1.2 L a year here (sample).' : ''),
+      chips: CHIPS.hostel };
+  }
+  if (hasAny(q, ['address', 'where is', 'enga', 'location', 'map', 'bus', 'travel', 'route', 'reach', 'phone', 'contact', 'number', 'mail', 'email', 'website', 'site'])) {
+    return { text: '<b>Address:</b> ' + esc(L.addr || c.city) + '<br><b>Phone:</b> ' + esc(L.phone || '—') + ' · <b>Email:</b> ' + esc(L.mail || '—') + '<br><b>Getting there:</b> ' + esc(L.how || 'ask the college for the nearest gate') +
+      '<br><span class="mut">Sample details — open the <b>Location</b> tab for the map. Confirm on ' + esc(String(c.web || '').replace(/^https?:\/\//, '')) + ' before you travel or call.</span>',
+      chips: CHIPS.loc };
+  }
+  if (hasAny(q, ['cutoff', 'cut off', 'rank', 'marks', 'mark podhu', 'tnea', 'neet', 'chance', 'get seat'])) {
+    var cr = findCourse(c, q);
+    if (cr && cr.cut[0] != null) {
+      var trend = cr.cut[2] > cr.cut[1] + .4 ? 'rising' : (cr.cut[2] < cr.cut[1] - .4 ? 'easing' : 'steady');
+      return { text: '<b>Closing cutoff — sample, out of 200:</b><br>' + cutLine(cr, cr.cut) + '<br>Trend: ' + trend + ' · ' + cr.seats + ' seats (sample, out of 200). ' + (cr.cut[2] > 190 ? 'This is a top-demand branch — keep a backup branch ready.' : 'A realistic target if your cutoff is close to this.'),
+        chips: CHIPS.cut };
+    }
+    return { text: '<b>Closing cutoffs (sample, 2026):</b>' + courseTable(c) + 'Cutoff = Maths + Physics/2 + Chemistry/2, out of 200. The full three-year trend is in the Courses tab.', chips: CHIPS.cut };
+  }
+  if (hasAny(q, ['placement', 'placed', 'salary', 'package', 'sambalam', 'job', 'recruiter', 'company', 'offer', 'lpa'])) {
+    var rec = c.recruiters.slice(0, 5).join(', ');
+    if (hasAny(q, ['highest', 'top package', 'max'])) return { text: '<b>Highest package:</b> ' + esc(p.high) + ' in ' + p.y + ' (sample). Average is ' + esc(p.avg) + ' with ' + p.pct + '% placed. Recruiters: ' + esc(rec) + '.', chips: CHIPS.place };
+    if (hasAny(q, ['recruiter', 'company', 'who comes', 'which company'])) return { text: '<b>Recruiters seen on campus:</b> ' + esc(c.recruiters.join(' · ')) + ' (sample list).', chips: CHIPS.place };
+    return { text: '<b>Placements at ' + esc(c.short) + ' (sample):</b><ul class="botlist">' + c.place.map(function (x) { return '<li>' + x.y + ' — ' + x.pct + '% placed · avg ' + esc(x.avg) + ' · high ' + esc(x.high) + '</li>'; }).join('') + '</ul>Top recruiters: ' + esc(rec) + '.', chips: CHIPS.place };
+  }
+  if (hasAny(q, ['seat', 'intake', 'how many'])) return { text: seat, chips: CHIPS.cut };
+  if (hasAny(q, ['course', 'branch', 'department', 'dept', 'programme', 'program', 'degree', 'study'])) return { text: '<b>Courses listed for ' + esc(c.short) + ':</b>' + courseTable(c) + 'Open the Courses tab for the three-year cutoff of each branch.', chips: CHIPS.cut };
+  if (hasAny(q, ['scholarship', 'free seat', 'concession', '7 5', 'first graduate', 'fee waiver'])) return { text: '<b>Scholarships (sample):</b> government-quota (TNEA) seats already carry the low fee; first-graduate, community and merit scholarships are applied for through the college office after admission. Ask the admission desk for the current list and last date.', chips: CHIPS.fee };
+  if (hasAny(q, ['document', 'certificate', 'marksheet', 'mark sheet', 'tc ', 'transfer certificate', 'nativity', 'photo'])) return { text: '<b>Keep ready:</b> Class 10 &amp; 12 marksheets, transfer certificate, community / nativity certificate, entrance scorecard (if any), Aadhaar, and 4 passport photos — original plus two copies.', chips: CHIPS.adm };
+  if (hasAny(q, ['admission', 'apply', 'application', 'counsel', 'quota', 'management', 'process', 'join'])) return { text: '<b>Admission route:</b> government-quota seats go through TNEA counselling (medical courses through NEET), management-quota applications open on the college portal after the rank list. Start with the marksheets and the TNEA/NEET scorecard.', chips: CHIPS.adm };
+  if (hasAny(q, ['rating', 'review', 'opinion', 'worth', 'nalla', 'student sonna'])) return { text: '<b>Student rating:</b> ★ ' + c.rating.toFixed(1) + '/5 (sample) with ' + c.reviews.length + ' reviews on this page. Category scores sit in the Reviews tab — placements ' + c.cats.Placements + ', infrastructure ' + c.cats.Infrastructure + ', fees value ' + c.cats['Fees value'] + '.', chips: ['Reviews la enna sonnanga?', 'Placement epdi?', 'Fees evlo?'] };
+  if (hasAny(q, ['naac', 'nirf', 'rank', 'accredit', 'approv', 'aicte', 'anna university'])) return { text: '<b>' + esc(c.naac) + ' · ' + esc(c.nirf) + '</b> · ' + esc(c.approval) + ' (sample).', chips: CHIPS.gen };
+  if (hasAny(q, ['about', 'history', 'founded', 'established', 'estd', 'when start', 'epo start'])) return { text: esc(c.about), chips: CHIPS.gen };
+  if (hasAny(q, ['fee', 'fees', 'kattanam', 'cost', 'amount', 'evlo', 'price', 'how much', 'money', 'expense'])) return { text: fee, chips: CHIPS.fee };
+
+  // last try: any word overlap with the campus Q&A already written on this page
+  var words = q.split(' '), bestQ = null, bestScore = 0;
+  c.qa.forEach(function (x) {
+    var hay = norm(x[0] + ' ' + x[1]), score = 0;
+    words.forEach(function (w) { if (w.length > 2 && hay.indexOf(w) >= 0) score++; });
+    if (score > bestScore) { bestScore = score; bestQ = x; }
+  });
+  if (bestScore >= 2) return { text: '<b>' + esc(bestQ[0]) + '</b><br>' + esc(bestQ[1]), chips: CHIPS.gen };
+  return { text: 'Indha kelvi-ku en kita ready answer illa 😅 — but I can still help with <b>fees, cutoffs, seats, hostel, placements, documents, admission and location</b>. Type it in your own words \u2014 or reach the admission desk directly; their phone, email and map are in the Location tab.',
+    chips: ['Fees evlo?', 'CSE cutoff?', 'Hostel irukka?'] };
+}
+function chatPush(cid, role, text, chips) {
+  if (!S.chat[cid]) S.chat[cid] = [];
+  S.chat[cid].push({ r: role, t: String(text).slice(0, 900), c: chips || null });
+  if (S.chat[cid].length > 30) S.chat[cid] = S.chat[cid].slice(-30);
+  save('pcc_chat', S.chat);
+}
+function chatBubble(m) {
+  if (m.r === 'u') return '<div class="msg msg--u">' + esc(m.t) + '</div>';
+  return '<div class="msg msg--b">' + m.t + '<div class="chips">' + (m.c || []).map(function (x) {
+    return '<button class="chip chip--ask" data-ask="' + esc(x) + '">' + esc(x) + '</button>';
+  }).join('') + '</div></div>';
+}
+function chatLogHTML(c) {
+  var log = S.chat[c.id];
+  if (!log || !log.length) {
+    var starter = c.qa.slice(0, 3).map(function (x) { return x[0]; });
+    return chatBubble({ r: 'b', t: 'Vanakkam! 👋 Naan <b>' + esc(c.short) + '</b> campus assistant (demo). Fees, cutoff, seats, hostel, placement, documents, admission illa location — edhuvenum kelunga, English illa Tanglish la. Group pathi-um kettukalaam: “which college for MBA?”, “PSG la evlo campus?” Keezha irukira kelviya tap pannalum answer kidaikkum.', c: starter });
+  }
+  return log.map(chatBubble).join('') + (S.typing ? '<div class="msg msg--b msg--typing"><i></i><i></i><i></i></div>' : '');
+}
+
+function tabLocation(c) {
+  var L = LOC[c.id] || {};
+  var q = encodeURIComponent(c.name + ', Coimbatore, Tamil Nadu');
+  var site = String(c.web || '').replace(/^https?:\/\//, '');
+  return '' +
+  '<section class="card">' +
+    '<div class="loc">' +
+      '<div>' +
+        '<h4>Address</h4>' +
+        '<p class="loc__addr">' + esc(L.addr || c.city) + '</p>' +
+        '<h4 style="margin-top:16px">Contact</h4>' +
+        '<div class="loc__dl">' +
+          '<div><span>Phone</span><b>' + esc(L.phone || '\u2014') + ' <i class="loc__tag">sample</i></b></div>' +
+          '<div><span>Email</span><b>' + esc(L.mail || '\u2014') + ' <i class="loc__tag">sample</i></b></div>' +
+          '<div><span>Website</span><b><a href="' + esc(c.web || '#') + '" target="_blank" rel="noopener noreferrer">' + esc(site) + ' \u2197</a></b></div>' +
+        '</div>' +
+        '<h4 style="margin-top:16px">Getting there</h4>' +
+        '<p class="mut" style="font-size:12.6px">' + esc(L.how || 'Ask the college for the nearest bus stop and gate.') + ' <i class="loc__tag">sample</i></p>' +
+        '<div class="loc__act">' +
+          '<a class="btn btn--navy" href="https://www.google.com/maps/search/?api=1&amp;query=' + q + '" target="_blank" rel="noopener noreferrer">Open in Google Maps \u2197</a>' +
+          '<a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=' + q + '" target="_blank" rel="noopener noreferrer">Get directions</a>' +
+        '</div>' +
+      '</div>' +
+      '<div class="loc__map">' +
+        '<iframe title="Map \u2014 ' + esc(c.name) + '" src="https://www.google.com/maps?q=' + q + '&amp;output=embed"' +
+          ' loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>' +
+      '</div>' +
+    '</div>' +
+    '<p class="legal" style="margin-top:12px">This demo shows a sample map pin, phone and email. Confirm the address, gate and contact number on the college\u2019s official site before you travel or call.</p>' +
+  '</section>';
+}
+
+function tabReviews(c) {
+  var cats = Object.keys(c.cats);
+  return '' +
+  '<div class="grid2">' +
+    '<section class="card">' +
+      '<div class="rate"><b class="rate__big">' + c.rating.toFixed(1) + '</b>' +
+        '<span><b>out of 5</b><br><span class="mut" style="font-size:12.2px">' + c.reviews.length + ' sample reviews</span></span></div>' +
+      '<div class="bars">' + cats.map(function (k) {
+        var v = c.cats[k];
+        return '<div class="bar"><span class="mut">' + esc(k) + '</span><span class="bar__t"><i style="width:' + (v * 20) + '%"></i></span><em>' + v.toFixed(1) + '</em></div>';
+      }).join('') + '</div>' +
+      '<p class="mut" style="margin-top:12px;font-size:12.2px">Ratings are sample values written for this demo — replace them with real, verified reviews before going live.</p>' +
+    '</section>' +
+    '<section class="card">' +
+      '<h4>What students say</h4>' +
+      c.reviews.map(function (r) {
+        return '<article class="rev"><div class="rev__h"><b>' + esc(r.n) + '</b><span class="tagx">' + esc(r.tag) + '</span><span class="rev__score">★ ' + r.r.toFixed(1) + '</span></div>' +
+          '<p>' + esc(r.t) + '</p>' +
+          '<div class="pc"><div class="p"><b>Pros</b>' + esc(r.p) + '</div><div class="c"><b>Cons</b>' + esc(r.c) + '</div></div></article>';
+      }).join('') +
+    '</section>' +
+  '</div>';
+}
+
+function tabQA(c) {
+  return '' +
+  '<section class="card chatcard">' +
+    '<div class="chathead"><b>💬 Campus assistant</b><span class="mut">rule-based demo · answers from this page</span>' +
+      '<span class="spacer"></span>' + ((S.chat[c.id] && S.chat[c.id].length) ? '<button class="chip" id="chatClear">Clear chat</button>' : '') + '</div>' +
+    '<div class="chatlog" id="chatLog">' + chatLogHTML(c) + '</div>' +
+    '<div class="chatbar">' +
+      '<input id="chatInput" type="text" placeholder="Ask anything — “CSE cutoff?”, “hostel fee evlo?”, “placement epdi?”" value="' + esc(S.chatDraft || '') + '" />' +
+      '<button class="btn btn--navy" id="chatSend">Send</button>' +
+    '</div>' +
+    '<p class="mut" style="margin-top:8px;font-size:11.8px">A demo bot — it reads the sample values on this page, not the internet. Numbers need confirming with the college.</p>' +
+  '</section>';
+}
+
+/* --------------------------------------------------------------- render ---- */
+function render() {
+  var c = S.id ? college(S.id) : null;
+  app.innerHTML = S.view === 'login' ? viewLogin(S.alert || '')
+    : S.view === 'details' ? viewDetails()
+    : S.view === 'detail' && c ? viewDetail(c)
+    : viewList();
+  if (S.scrollChat) {
+    S.scrollChat = false;
+    var lg = document.getElementById('chatLog');
+    if (lg) {
+      lg.scrollTop = lg.scrollHeight;
+      if (S.chatInto && typeof lg.scrollIntoView === 'function') {
+        try { lg.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
+      }
+    }
+    S.chatInto = false;
+  }
+  if (S.view === 'list') {
+    var q = document.getElementById('q');
+    if (q) { q.focus({ preventScroll: true }); q.setSelectionRange(q.value.length, q.value.length); }
+  }
+}
+
+/* --------------------------------------------------------------- events ---- */
+document.addEventListener('submit', function (e) {
+  if (e.target.id === 'loginForm') {
+    e.preventDefault();
+    var em = (document.getElementById('em').value || '').trim().toLowerCase();
+    var pw = document.getElementById('pw').value || '';
+    if (!em || pw.length < 4) { S.alert = 'Email + password (4+ characters) podunga.'; render(); return; }
+    S.alert = ''; S.busy = true; render();
+    api('/api/login', { email: em, pw: pw }).then(function (res) {
+      S.busy = false;
+      if (!res || !res.ok) { S.alert = (res && res.error) || 'Login fail aachu.'; render(); return; }
+      S.draft = {};
+      startSession(em, pw, res.profile, false);
+    }).catch(function () {
+      S.busy = false;
+      var local = null;
+      try { local = JSON.parse(localStorage.getItem('pcc_profile') || 'null'); } catch (err) {}
+      S.draft = {};
+      startSession(em, pw, local, true);
+    });
+  }
+});
+document.addEventListener('click', function (e) {
+  var t = e.target;
+  var el = t.closest ? t.closest('[data-open],[data-save],[data-tab],[data-ask],[data-lvl],[data-stay],[data-hostel],[data-travel],[data-grp]') : null;
+
+  if (t.id === 'demoFill') {
+    document.getElementById('em').value = DEMO.email;
+    document.getElementById('pw').value = DEMO.pw;
+    toast('Demo details filled — press Sign in'); return;
+  }
+  if (t.id === 'signout') { S.user = null; S.profile = null; S.draft = {}; save('pcc_user', null); S.view = 'login'; render(); return; }
+  if (t.id === 'back') { S.id = null; S.view = 'list'; S.tab = 'overview'; render(); return; }
+  if (t.id === 'bell') { document.getElementById('bellPanel').classList.toggle('on'); return; }
+  if (t.id === 'savedChip') { S.savedOnly = !S.savedOnly; render(); return; }
+  if (el && el.hasAttribute('data-grp')) { S.grp = el.getAttribute('data-grp'); S.q = ''; S.savedOnly = false; render(); return; }
+  if (t.id === 'allGroups') { S.grp = null; S.q = ''; S.savedOnly = false; render(); return; }
+  if (el && el.hasAttribute('data-lvl')) { S.lvl = el.getAttribute('data-lvl'); render(); return; }
+  if (t.id === 'chatSend') { chatSend(); return; }
+  if (t.id === 'signout2') { S.user = null; S.profile = null; S.draft = {}; save('pcc_user', null); S.view = 'login'; render(); return; }
+  if (t.id === 'editProfile') { S.draft = Object.assign({}, S.profile || {}); S.formErr = null; S.view = 'details'; S.id = null; render(); return; }
+  if (t.id === 'saveProfile') { saveProfileNow(); return; }
+  if (t.id === 'skipProfile') { S.view = 'list'; render(); toast('Later \u2014 details save pannala'); return; }
+  if (el && (el.hasAttribute('data-stay') || el.hasAttribute('data-hostel') || el.hasAttribute('data-travel'))) {
+    var keep = collectForm();
+    if (el.hasAttribute('data-stay')) { keep.stay = el.getAttribute('data-stay'); keep.hostelType = ''; keep.travel = ''; }
+    if (el.hasAttribute('data-hostel')) keep.hostelType = el.getAttribute('data-hostel');
+    if (el.hasAttribute('data-travel')) keep.travel = el.getAttribute('data-travel');
+    S.draft = keep;
+    S.formErr = null;
+    render();
+    return;
+  }
+  if (t.id === 'chatClear') { var cid = S.id; if (cid) { delete S.chat[cid]; save('pcc_chat', S.chat); } render(); toast('Chat cleared'); return; }
+  if (el && el.hasAttribute('data-ask')) { var aq = el.getAttribute('data-ask'); chatSend(aq); return; }
+  if (!el) { var p = document.getElementById('bellPanel'); if (p) p.classList.remove('on'); return; }
+
+  if (el.hasAttribute('data-save')) {
+    e.stopPropagation();
+    var id = el.getAttribute('data-save');
+    var i = S.saved.indexOf(id);
+    if (i >= 0) { S.saved.splice(i, 1); toast('Removed from saved'); } else { S.saved.push(id); toast('Saved — find it under ★ Saved'); }
+    save('pcc_saved', S.saved); render(); return;
+  }
+  if (el.hasAttribute('data-tab')) { S.tab = el.getAttribute('data-tab'); render(); return; }
+  if (el.hasAttribute('data-open')) { S.id = el.getAttribute('data-open'); S.view = 'detail'; S.tab = 'overview'; render(); return; }
+});
+function chatSend(forced) {
+  var c = S.id ? college(S.id) : null; if (!c) { toast('Open a campus first'); return; }
+  var box = document.getElementById('chatInput');
+  var v = String(forced != null ? forced : (box && box.value) || '').trim();
+  if (v.length < 2) { toast('Type your question first'); return; }
+  if (box) box.value = '';
+  chatPush(c.id, 'u', v);
+  S.typing = true; S.scrollChat = true; render();
+  setTimeout(function () {
+    var a = botAnswer(c, v);
+    S.typing = false; S.scrollChat = true;
+    chatPush(c.id, 'b', a.text, a.chips);
+    render();
+  }, 430);
+}
+
+document.addEventListener('input', function (e) {
+  if (e.target.id === 'q') { S.q = e.target.value; render(); }
+  if (/^f_/.test(e.target.id)) {
+    ['name', 'phone', 'marks10', 'marks12', 'town'].forEach(function (k) {
+      var el = document.getElementById('f_' + k);
+      if (el) S.draft[k] = el.value;
+    });
+  }
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && e.target.id === 'chatInput') { e.preventDefault(); chatSend(); return; }
+  if (e.key === 'Enter' && e.target.getAttribute && e.target.getAttribute('data-grp')) {
+    S.grp = e.target.getAttribute('data-grp'); S.q = ''; S.savedOnly = false; render(); return;
+  }
+});
+
+render();
+if (typeof fetch === 'function') {
+  fetch('/api/health').then(function (r) { return r.json(); }).then(function (j) {
+    S.backend = !!(j && j.ok);
+    if (S.view === 'login') render();
+  }).catch(function () { S.backend = false; if (S.view === 'login') render(); });
+} else { S.backend = false; }
+</script>
+</body>
+</html>

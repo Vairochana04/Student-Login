@@ -1,0 +1,16 @@
+{
+ "student@demo.edu": {
+  "email": "student@demo.edu",
+  "password": "8db1405d750d44dc:7b3026bf4fec7bba0cde1b8e360507d4d815a556638c4dd0e3d6c141a12891a9",
+  "created": "2026-10-15T07:13:58Z",
+  "updated": "2026-10-15T07:16:37Z",
+  "name": "Karthik.S",
+  "phone": "9876543210",
+  "marks10": "95",
+  "marks12": "95",
+  "town": "Coimbatore",
+  "stay": "Day scholar",
+  "hostelType": "",
+  "travel": "Not needed"
+ }
+}

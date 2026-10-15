@@ -1,0 +1,15 @@
+# Runtime data written by the backend (student accounts + activity log).
+# Created on the first student registration - never commit real student data.
+server/data/students.json
+server/data/students.json.tmp
+server/data/student-events.jsonl
+
+# Python bytecode from the legacy helper server
+__pycache__/
+*.pyc
+
+# SSR render-smoke-test output (app/ssr-check.jsx)
+app/.ssrcheck/
+
+# psg-compass demo backend — runtime student data (server.py seeds the demo account)
+psg-compass/data/

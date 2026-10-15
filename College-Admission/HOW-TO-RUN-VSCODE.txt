@@ -1,0 +1,99 @@
+PSG CAMPUS COMPASS + CAMPUSCONNECT  —  COMPLETE PROJECT
+======================================================
+VS CODE LA OPEN PANNI RUN PANNA STEPS (Tanglish)
+
+
+0) ENNA IRUKKU ITHULA
+---------------------
+  app/                 CampusConnect React app (source + built dist)
+  server/              CampusConnect Java backend (Server.java)
+  psg-compass-java/    PSG Campus Compass — Java backend + site (RECOMMENDED)
+  psg-compass/         PSG Campus Compass — original (Python backend version)
+  tools/ docs/ legacy/ college-site/ screenshots/ image-search/
+  README.md, START-*.txt/bat/sh, start-server.ps1
+
+
+1) EXTRACT + VS CODE LA OPEN
+----------------------------
+  a) indha zip-a extract pannunga (right-click -> Extract All)
+  b) VS Code open pannunga
+  c) File -> Open Folder...  ->  extract aana "College-Admission" folder-a select pannunga
+  d) VS Code keezha Terminal open pannunga:  Terminal -> New Terminal  (illa Ctrl + `)
+  e) (venum-na) Extensions la "Extension Pack for Java" install pannunga —
+     apram Java errors VS Code-la thana kaattum
+
+
+2) PSG CAMPUS COMPASS RUN PANNA (Java backend)  ← ithu unga main site
+--------------------------------------------------------------------
+  Terminal la:
+
+      cd psg-compass-java
+      javac -encoding UTF-8 Server.java
+      java Server
+
+  Aprm browser la:   http://localhost:8090
+
+  Demo login:  student@demo.edu  /  student123
+     First time  -> details form (name, phone, 10 & 12 marks, location, hostel)
+     Save panna  -> colleges varum
+     Next time adhe id + password  -> colleges DIRECT (register illa)
+
+  Server-a nirutha: Terminal la  Ctrl + C
+
+
+3) CAMPUSCONNECT (admission portal) RUN PANNA
+---------------------------------------------
+  Terminal la:
+
+      cd server
+      java Server.java          (JDK 11+ la single-file launch — build step illa)
+
+  Browser:  http://localhost:8080
+
+  Demo logins:
+      student@demo.edu / student123     (student)
+      college@demo.edu / college123     (college)
+      admin@demo.edu   / admin123       (platform admin)
+
+
+4) SERVER ILLAAMA (offline-a) PAKKANUM-NA
+-----------------------------------------
+  index.html-a double-click pannaa site work aagum —
+      psg-compass-java/index.html      (PSG Campus Compass)
+  Aana details antha device la mattum save aagum (localStorage).
+
+
+5) REACT DEV MODE (page-a edit panni hot-reload la paakkanum-na)
+----------------------------------------------------------------
+  Terminal 1:   cd server   &&   java Server.java
+  Terminal 2:   cd app      &&   npm install   &&   npm run dev
+  Browser:      http://localhost:5173
+
+  (Production build-a maathanum-na:  cd app  &&  npm run build  ->  app/dist update aagum)
+
+
+6) PROBLEM VANDHA (troubleshooting)
+-----------------------------------
+  "java: command not found" illa "javac is not recognized"
+      -> JDK install illa. Install pannunga:
+         Windows : winget install Microsoft.OpenJDK.21
+         macOS   : brew install openjdk@21
+         Ubuntu  : sudo apt install openjdk-21-jdk
+         illa    : https://adoptium.net  ->  Temurin 21 (JDK)
+      -> Install panna pinne VS Code-a close panni thirumba open pannunga
+         (PATH varum).
+
+  "port already in use"
+      -> pazhaya server window innum open-a irukku. Adha close pannunga
+         (illa Windows la:  taskkill /F /IM java.exe ), apram thirumba start.
+
+  Vera port venum-na:
+      Windows : set PORT=9000 && java Server
+      Mac/Linux: PORT=9000 java Server
+
+
+7) MUKKIYAM (note)
+------------------
+  Ratings, fees, cutoffs, seats, placements, reviews, Q & A —
+  ellaam SAMPLE (indicative) values only. Demo-ku mattum.
+  Real admission-ku official college website-a paarunga.
